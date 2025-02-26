@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Livewire\Volt\Volt;
 use Illuminate\Support\Facades\Route;
 use Stancl\Tenancy\Middleware\InitializeTenancyByDomain;
 use Stancl\Tenancy\Middleware\PreventAccessFromCentralDomains;
@@ -23,8 +24,22 @@ Route::middleware([
     InitializeTenancyByDomain::class,
     PreventAccessFromCentralDomains::class,
 ])->group(function () {
-    Route::get('/', function () {
-        return view('pages.tenants.index');
-        //return 'This is your multi-tenant application. The id of the current tenant is ' . tenant('id');
+    // Route::get('/', function () {
+    //     return view('pages.tenants.index');
+    //     //return 'This is your multi-tenant application. The id of the current tenant is ' . tenant('id');
+    // });
+
+    Route::view('dashboard', 'dashboard')
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
+
+    Route::middleware(['auth'])->group(function () {
+        Route::redirect('settings', 'settings/profile');
+
+        Volt::route('settings/profile', 'settings.profile')->name('settings.profile');
+        Volt::route('settings/password', 'settings.password')->name('settings.password');
+        Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
     });
+
+    require __DIR__.'/auth_tenant.php';
 });
