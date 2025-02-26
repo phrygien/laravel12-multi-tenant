@@ -29,16 +29,16 @@ Route::middleware([
     })->name('home');
     
 
-    Route::view('dashboard', 'dashboard')
+    Route::view('dashboard', 'pages.tenants.dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
     Route::middleware(['auth'])->group(function () {
         Route::redirect('settings', 'settings/profile');
 
-        Volt::route('settings/profile', 'settings.profile')->name('settings.profile');
-        Volt::route('settings/password', 'settings.password')->name('settings.password');
-        Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
+        Volt::route('settings/profile', 'settings_tenant.profile')->name('settings.profile');
+        Volt::route('settings/password', 'settings_tenant.password')->name('settings.password');
+        Volt::route('settings/appearance', 'settings_tenant.appearance')->name('settings.appearance');
     });
 
     require __DIR__.'/auth_tenant.php';
