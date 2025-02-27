@@ -10,7 +10,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
 use Livewire\Volt\Component;
 
-new #[Layout('components.layouts.auth')] class extends Component {
+new #[Layout('components.layouts.auth_tenant')] class extends Component {
     #[Validate('required|string|email')]
     public string $email = '';
 
@@ -73,7 +73,7 @@ new #[Layout('components.layouts.auth')] class extends Component {
 }; ?>
 
 <div class="flex flex-col gap-6">
-    <x-auth-header title="Log in to your account" description="Enter your email and password below to log in" />
+    <x-auth-header title="Log in to your account {{ tenant('id') }}" description="Enter your email and password below to log in" />
 
     <!-- Session Status -->
     <x-auth-session-status class="text-center" :status="session('status')" />
