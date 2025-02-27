@@ -23,7 +23,7 @@ foreach (config('tenancy.central_domains') as $domain) {
             Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
         });
 
-        Route::middleware(['auth', 'module.access:reports'])->group(function () {
+        Route::middleware(['auth', 'module.access:sdsfdf'])->group(function () {
             Route::get('hello', function () {
                 return "Hello";
             });

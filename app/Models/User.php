@@ -58,6 +58,12 @@ class User extends Authenticatable
             ->map(fn (string $name) => Str::of($name)->substr(0, 1))
             ->implode('');
     }
+    
+    public function hasModuleAccess($moduleName): bool
+    {
+        return $this->accessibleModules()->contains('name', $moduleName);
+    }
+
 
     public function subscriptions(): HasMany
     {
@@ -72,12 +78,7 @@ class User extends Authenticatable
     public function accessibleModules()
     {
         $subscription = $this->activeSubscription();
-        return $subscription ? $subscription->modules : collect([]);
+        return $subscription ? $subscription->plan->modules : collect([]);
     }
     
-    public function hasModuleAccess($moduleName): bool
-    {
-        return $this->accessibleModules()->contains('name', $moduleName);
-    }
-
 }

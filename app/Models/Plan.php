@@ -15,11 +15,11 @@ class Plan extends Model
         return $this->belongsToMany(PlanFeature::class);
     }
 
-    public function modules(): BelongsToMany
+    public function modules()
     {
         return $this->belongsToMany(Module::class, 'plan_modules');
     }
-
+    
     public function has_module($module): bool
     {
        foreach ($this->modules as $m) {

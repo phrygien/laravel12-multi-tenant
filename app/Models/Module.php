@@ -9,9 +9,9 @@ class Module extends Model
 {
     protected $table = 'modules';
 
-    public function plans(): BelongsToMany
+    public function plans()
     {
         return $this->belongsToMany(Plan::class, 'plan_modules');
     }
-
+    
 }

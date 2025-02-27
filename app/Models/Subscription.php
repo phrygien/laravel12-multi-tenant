@@ -15,17 +15,13 @@ class Subscription extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function plan(): BelongsTo
+    public function plan()
     {
         return $this->belongsTo(Plan::class);
     }
 
-    /**
-     * Relation pour récupérer les modules accessibles via le plan
-     */
-    public function modules(): HasManyThrough
+    public function modules()
     {
-        return $this->hasManyThrough(Module::class, Plan::class, 'id', 'id', 'plan_id', 'id');
+        return $this->plan->modules();
     }
-
 }

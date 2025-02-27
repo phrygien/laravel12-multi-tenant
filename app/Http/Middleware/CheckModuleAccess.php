@@ -17,7 +17,7 @@ class CheckModuleAccess
         $user = Auth::user();
 
         // Vérifier si l'utilisateur est authentifié et a accès au module
-        if (!$user || !$user->hasModuleAccess($moduleName)) {
+        if (!$user || !$user->accessibleModules()->contains('name', $moduleName)) {
             abort(403);
         }
 
