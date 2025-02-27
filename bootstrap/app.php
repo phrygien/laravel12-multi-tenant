@@ -12,6 +12,10 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->group('universal', []);
+
+        $middleware->alias([
+            'module.access' => App\Http\Middleware\CheckModuleAccess::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

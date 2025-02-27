@@ -21,6 +21,13 @@ foreach (config('tenancy.central_domains') as $domain) {
             Volt::route('settings/password', 'settings.password')->name('settings.password');
             Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
         });
+
+        Route::middleware(['auth', 'module.access:gestion-stock'])->group(function () {
+            Route::get('hello', function () {
+                return "Hello";
+            });
+        });
+        
         
         require __DIR__.'/auth.php';
         
