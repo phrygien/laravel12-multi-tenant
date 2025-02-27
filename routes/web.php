@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
@@ -22,13 +23,19 @@ foreach (config('tenancy.central_domains') as $domain) {
             Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
         });
 
-        Route::middleware(['auth', 'module.access:gestion-stock'])->group(function () {
+        Route::middleware(['auth', 'module.access:reports'])->group(function () {
             Route::get('hello', function () {
                 return "Hello";
             });
         });
         
-        
+        // Route::get('hello', function () {
+        //     $user = Auth::user();
+
+        //     dd($user->accessibleModules());
+        //     //dd($user->hasModuleAccess('gestion-stock'));
+        //     return "Hello";
+        // });
         require __DIR__.'/auth.php';
         
     });

@@ -72,7 +72,6 @@ class User extends Authenticatable
     public function accessibleModules()
     {
         $subscription = $this->activeSubscription();
-    
         return $subscription ? $subscription->modules : collect([]);
     }
     

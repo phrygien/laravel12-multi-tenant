@@ -27,4 +27,5 @@ class Subscription extends Model
     {
         return $this->hasManyThrough(Module::class, Plan::class, 'id', 'id', 'plan_id', 'id');
     }
+
 }
