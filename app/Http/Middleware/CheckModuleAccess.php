@@ -18,8 +18,9 @@ class CheckModuleAccess
 
         // Vérifier si l'utilisateur est authentifié et a accès au module
         if (!$user || !$user->accessibleModules()->contains('name', $moduleName)) {
-            abort(403);
+            abort(403, 'Vous n\'avez pas les permissions nécessaires pour accéder à ce module.');
         }
+        
 
         return $next($request);
     }
