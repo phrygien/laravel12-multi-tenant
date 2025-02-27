@@ -1,3 +1,3 @@
 <x-layouts.app>
-    <livewire:admins.modules.index />
+    <livewire:admins.plans.index />
 </x-layouts.app>
