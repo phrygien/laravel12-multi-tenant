@@ -53,7 +53,6 @@ new class extends Component {
                     <a href="#" class="focus:outline-none">
                         <span class="absolute inset-0" aria-hidden="true"></span>
                         <p class="text-sm font-medium text-gray-900 dark:text-zinc-100">{{ $module->name }}</p>
-                        <p class="text-sm text-gray-500 truncate dark:text-gray-400">Co-Founder / CEO</p>
                     </a>
                 </div>
             </div>
@@ -63,6 +62,6 @@ new class extends Component {
     </div>
 
 
-    {{ $modules->links('vendor.pagination.tailwind') }}
+    {{ $modules->links('vendor.pagination.tailwind-not-round') }}
 
 </div>
