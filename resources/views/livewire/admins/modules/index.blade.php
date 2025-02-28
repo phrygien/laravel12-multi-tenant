@@ -14,7 +14,7 @@ new class extends Component {
     public function with(): array
     {
         return [
-            'modules' => Module::paginate(24),
+            'modules' => Module::paginate(28),
         ];
     }
 }; ?>
@@ -28,6 +28,7 @@ new class extends Component {
     <flux:subheading>This information will be displayed publicly.</flux:subheading>
   </div>
   <div class="mt-4 flex md:mt-0 md:ml-4">
+    <flux:input icon="magnifying-glass" placeholder="Search modules" class="mr-3" />
     <flux:button variant="primary" href="{{ route('modules.create') }}">{{ __('Ajouter un module') }}</flux:button>
   </div>
 </div>
@@ -62,6 +63,6 @@ new class extends Component {
     </div>
 
 
-    {{ $modules->links() }}
+    {{ $modules->links('vendor.pagination.tailwind') }}
 
 </div>
