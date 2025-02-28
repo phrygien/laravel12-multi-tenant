@@ -18,6 +18,16 @@
                 <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')"
                     wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
             </flux:navlist.group>
+
+            <flux:navlist.group heading="Administration" class="grid mt-3">
+                <flux:navlist.item icon="cube" :href="route('admin.modules')"
+                    :current="request()->routeIs('admin.modules')" wire:navigate>{{ __('Modules') }}
+                </flux:navlist.item>
+
+                <flux:navlist.item icon="rectangle-stack" :href="route('admin.plans')"
+                    :current="request()->routeIs('admin.plans')" wire:navigate>{{ __('Plans') }}
+                </flux:navlist.item>
+            </flux:navlist.group>
         </flux:navlist>
 
         <flux:spacer />

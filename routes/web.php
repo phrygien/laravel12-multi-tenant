@@ -23,9 +23,10 @@ foreach (config('tenancy.central_domains') as $domain) {
             Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
         });
 
-        Route::middleware(['auth', 'module.access:sdsfdf'])->group(function () {
-            Route::get('hello', function () {
-                return "Hello";
+        Route::middleware(['auth', 'module.access:dashboard'])->group(function () {
+            Route::prefix('admin')->group(function () {
+                Route::view('modules', 'pages.admins.modules.index')->name('admin.modules');
+                Route::view('plans', 'pages.admins.plans.index')->name('admin.plans');
             });
         });
 
