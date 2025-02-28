@@ -9,9 +9,13 @@ class Module extends Model
 {
     protected $table = 'modules';
 
+    protected $fillable = [
+        'name',
+
+    ];
     public function plans()
     {
         return $this->belongsToMany(Plan::class, 'plan_modules');
     }
-    
+
 }

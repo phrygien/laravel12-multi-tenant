@@ -26,17 +26,12 @@ foreach (config('tenancy.central_domains') as $domain) {
         Route::middleware(['auth', 'module.access:dashboard'])->group(function () {
             Route::prefix('admin')->group(function () {
                 Route::view('modules', 'pages.admins.modules.index')->name('admin.modules');
+                Route::view('/modules/create', 'pages.admins.modules.create')->name('modules.create');
+
                 Route::view('plans', 'pages.admins.plans.index')->name('admin.plans');
             });
         });
 
-        // Route::get('hello', function () {
-        //     $user = Auth::user();
-
-        //     dd($user->accessibleModules());
-        //     //dd($user->hasModuleAccess('gestion-stock'));
-        //     return "Hello";
-        // });
         require __DIR__ . '/auth.php';
 
     });
