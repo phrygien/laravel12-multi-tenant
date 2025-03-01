@@ -1,20 +1,29 @@
 <?php
 
 use App\Models\Module;
+use Livewire\Attributes\Url;
 use Livewire\WithPagination;
 use Livewire\Volt\Component;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 new class extends Component {
     use WithPagination;
-    public function mount(): void
-    {
 
+    #[Url]
+    public $query = '';
+
+    #[Url(as: 'page', keep: true)] // Stocke la page actuelle dans l'URL
+    public int $page = 1;
+
+    public function modules(): LengthAwarePaginator
+    {
+        return Module::where('name', 'like', '%'.$this->query.'%')->paginate(10);
     }
 
     public function with(): array
     {
         return [
-            'modules' => Module::paginate(28),
+            'modules' => $this->modules(),
         ];
     }
 }; ?>
@@ -28,40 +37,47 @@ new class extends Component {
     <flux:subheading>This information will be displayed publicly.</flux:subheading>
   </div>
   <div class="mt-4 flex md:mt-0 md:ml-4">
-    <flux:input icon="magnifying-glass" placeholder="Search modules" class="mr-3" />
+    <flux:input icon="magnifying-glass" placeholder="Search modules" class="mr-3" wire:model.live="query" />
     <flux:button variant="primary" href="{{ route('modules.create') }}">{{ __('Ajouter un module') }}</flux:button>
   </div>
 </div>
 
 
-    <div>
-        <!-- This example requires Tailwind CSS v2.0+ -->
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-4">
-
-        @foreach ($modules as $module  )
-        <div
-                class="relative rounded-lg border border-gray-300 bg-white dark:bg-zinc-800 dark:border-zinc-700 600 px-6 py-5 shadow-sm flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                <!-- <div class="flex-shrink-0">
-                    <img class="h-10 w-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt="">
-                </div> -->
-                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-gray-400 dark:bg-gray-500 flex items-center justify-center text-white text-lg font-bold">
-                    {{ strtoupper(substr($module->name, 0, 1)) }}
-                </div>
-                <div class="flex-1 min-w-0">
-                    <a href="#" class="focus:outline-none">
-                        <span class="absolute inset-0" aria-hidden="true"></span>
-                        <p class="text-sm font-medium text-gray-900 dark:text-zinc-100">{{ $module->name }}</p>
-                    </a>
-                </div>
+    <div class="flex flex-col">
+        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="shadow overflow-hidden border border-gray-200 dark:border-zinc-700 sm:rounded-lg">
+                <table class="min-w-full divide-y divide-gray-200 dark:divide-zinc-700">
+                <thead class="bg-gray-50 dark:bg-zinc-700">
+                    <tr>
+                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium dark:text-white text-gray-500 uppercase tracking-wider">Name</th>
+                    <th scope="col" class="relative px-6 py-3">
+                        <span class="sr-only">Edit</span>
+                    </th>
+                    </tr>
+                </thead>
+                <tbody class="dark:bg-zinc-800 dark:text-white dark:border-zinc-700 bg-white divide-y divide-gray-200 dark:divide-zinc-700">
+                @foreach ($modules as $module  )
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium dark:text-white text-gray-900">{{ $module->name }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                        <flux:button variant="danger">Danger</flux:button>
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+                </table>
             </div>
-        @endforeach
+
+            <div class="mt-8">
+
+            <div wire:navigate>
+                {{ $modules->links('vendor.pagination.tailwind-not-round') }}
+            </div>
+            </div>
+
+            </div>
         </div>
-
     </div>
-
-
-    {{ $modules->links('vendor.pagination.tailwind-not-round') }}
 
 </div>
