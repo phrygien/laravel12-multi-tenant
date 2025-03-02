@@ -10,41 +10,162 @@ new class extends Component {
     <flux:heading level="3" size="xl">Tarifications</flux:heading>
     <flux:subheading>This information will be displayed publicly.</flux:subheading>
 
-    <!-- This example requires Tailwind CSS v2.0+ -->
-    <div class="flex flex-col">
-        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
-                <table class="min-w-full divide-y divide-gray-200 dark:divide-zinc-700">
-                <thead class="bg-gray-50 dark:bg-zinc-700">
-                    <tr>
-                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium dark:text-white text-gray-500 uppercase tracking-wider">Name</th>
-                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium dark:text-white text-gray-500 uppercase tracking-wider">Title</th>
-                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium dark:text-white text-gray-500 uppercase tracking-wider">Email</th>
-                    <th scope="col" class="px-6 py-3 text-left text-xs font-medium dark:text-white text-gray-500 uppercase tracking-wider">Role</th>
-                    <th scope="col" class="relative px-6 py-3">
-                        <span class="sr-only">Edit</span>
-                    </th>
-                    </tr>
-                </thead>
-                <tbody class="dark:bg-zinc-800 dark:text-white dark:border-zinc-700 bg-white divide-y divide-gray-200">
-                    <tr>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium dark:text-white text-gray-900">Jane Cooper</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm dark:text-white text-gray-500">Regional Paradigm Technician</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm dark:text-white text-gray-500">jane.cooper@example.com</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-sm dark:text-white text-gray-500">Admin</td>
-                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                    <flux:button variant="danger">Danger</flux:button>
-                    </td>
-                    </tr>
-
-                    <!-- More people... -->
-                </tbody>
-                </table>
+    <div class="overflow-x-auto">
+  <table class="table">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th>
+          <label>
+            <input type="checkbox" class="checkbox" />
+          </label>
+        </th>
+        <th>Name</th>
+        <th>Job</th>
+        <th>Favorite Color</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- row 1 -->
+      <tr>
+        <th>
+          <label>
+            <input type="checkbox" class="checkbox" />
+          </label>
+        </th>
+        <td>
+          <div class="flex items-center gap-3">
+            <div class="avatar">
+              <div class="mask mask-squircle h-12 w-12">
+                <img
+                  src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                  alt="Avatar Tailwind CSS Component" />
+              </div>
             </div>
+            <div>
+              <div class="font-bold">Hart Hagerty</div>
+              <div class="text-sm opacity-50">United States</div>
             </div>
-        </div>
-    </div>
-
-
+          </div>
+        </td>
+        <td>
+          Zemlak, Daniel and Leannon
+          <br />
+          <span class="badge badge-ghost badge-sm">Desktop Support Technician</span>
+        </td>
+        <td>Purple</td>
+        <th>
+          <button class="btn btn-ghost btn-xs">details</button>
+        </th>
+      </tr>
+      <!-- row 2 -->
+      <tr>
+        <th>
+          <label>
+            <input type="checkbox" class="checkbox" />
+          </label>
+        </th>
+        <td>
+          <div class="flex items-center gap-3">
+            <div class="avatar">
+              <div class="mask mask-squircle h-12 w-12">
+                <img
+                  src="https://img.daisyui.com/images/profile/demo/3@94.webp"
+                  alt="Avatar Tailwind CSS Component" />
+              </div>
+            </div>
+            <div>
+              <div class="font-bold">Brice Swyre</div>
+              <div class="text-sm opacity-50">China</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          Carroll Group
+          <br />
+          <span class="badge badge-ghost badge-sm">Tax Accountant</span>
+        </td>
+        <td>Red</td>
+        <th>
+          <button class="btn btn-ghost btn-xs">details</button>
+        </th>
+      </tr>
+      <!-- row 3 -->
+      <tr>
+        <th>
+          <label>
+            <input type="checkbox" class="checkbox" />
+          </label>
+        </th>
+        <td>
+          <div class="flex items-center gap-3">
+            <div class="avatar">
+              <div class="mask mask-squircle h-12 w-12">
+                <img
+                  src="https://img.daisyui.com/images/profile/demo/4@94.webp"
+                  alt="Avatar Tailwind CSS Component" />
+              </div>
+            </div>
+            <div>
+              <div class="font-bold">Marjy Ferencz</div>
+              <div class="text-sm opacity-50">Russia</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          Rowe-Schoen
+          <br />
+          <span class="badge badge-ghost badge-sm">Office Assistant I</span>
+        </td>
+        <td>Crimson</td>
+        <th>
+          <button class="btn btn-ghost btn-xs">details</button>
+        </th>
+      </tr>
+      <!-- row 4 -->
+      <tr>
+        <th>
+          <label>
+            <input type="checkbox" class="checkbox" />
+          </label>
+        </th>
+        <td>
+          <div class="flex items-center gap-3">
+            <div class="avatar">
+              <div class="mask mask-squircle h-12 w-12">
+                <img
+                  src="https://img.daisyui.com/images/profile/demo/5@94.webp"
+                  alt="Avatar Tailwind CSS Component" />
+              </div>
+            </div>
+            <div>
+              <div class="font-bold">Yancy Tear</div>
+              <div class="text-sm opacity-50">Brazil</div>
+            </div>
+          </div>
+        </td>
+        <td>
+          Wyman-Ledner
+          <br />
+          <span class="badge badge-ghost badge-sm">Community Outreach Specialist</span>
+        </td>
+        <td>Indigo</td>
+        <th>
+          <button class="btn btn-ghost btn-xs">details</button>
+        </th>
+      </tr>
+    </tbody>
+    <!-- foot -->
+    <tfoot>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Job</th>
+        <th>Favorite Color</th>
+        <th></th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
 </div>
