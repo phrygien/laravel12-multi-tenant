@@ -24,7 +24,7 @@ foreach (config('tenancy.central_domains') as $domain) {
             Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
         });
 
-        Route::middleware(['auth', 'module.access:dashboard'])->group(function () {
+        Route::middleware(['auth'])->group(function () {
             Route::prefix('admin')->group(function () {
                 Route::view('modules', 'pages.admins.modules.index')->name('admin.modules');
                 Route::view('/modules/create', 'pages.admins.modules.create')->name('modules.create');
