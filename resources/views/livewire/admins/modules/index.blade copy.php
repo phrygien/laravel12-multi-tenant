@@ -55,12 +55,13 @@ new class extends Component {
     </div>
     <div class="mt-4 flex md:mt-0 md:ml-4">
         <flux:input icon="magnifying-glass" placeholder="Search modules" class="mr-3 flex-1 min-w-0 " wire:model.live="query" />
-        <flux:modal.trigger name="add-module">
+        <flux:modal.trigger name="create-module">
             <flux:button>Ajouter un module</flux:button>
         </flux:modal.trigger>
     </div>
     </div>
 
+    <livewire:admins.modules.create />
     <livewire:admins.modules.edit />
     <livewire:admins.modules.delete />
 
@@ -71,7 +72,7 @@ new class extends Component {
             <h2 class="card-title text-sm dark:text-white">{{ $module->name }}</h2>
             <div class="card-actions justify-end">
                 <flux:button wire:click="edit({{ $module->id }})">Modifier</flux:button>
-                <flux:button variant="danger" wire:click="deleteData({{ $module->id }})" class="border border-white">Supprimer</flux:button>
+                <flux:button variant="danger" wire:click="deleteData({{ $module->id }})" class="border border-white" :loading="false">Supprimer</flux:button>
                 </button>
             </div>
         </div>
@@ -79,17 +80,8 @@ new class extends Component {
     @endforeach
 </div>
 
-
-
 <div class="mt-8">
     {{ $modules->links('vendor.pagination.tailwind-not-round') }}
 </div>
-
-    <flux:modal name="add-module" variant="flyout">
-        <livewire:admins.modules.create />
-    </flux:modal>
-
-    </div>
-
     
 </div>

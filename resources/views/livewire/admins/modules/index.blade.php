@@ -17,7 +17,7 @@ new class extends Component {
     #[On('refresh-list')]
     public function modules(): LengthAwarePaginator
     {
-        return Module::where('name', 'like', '%'.$this->query.'%')->orderByDesc('id')->paginate(28);
+        return Module::where('name', 'like', '%'.$this->query.'%')->orderByDesc('id')->paginate(perPage: 18);
     }
 
     public function edit($id)
@@ -39,7 +39,7 @@ new class extends Component {
     
 }; ?>
 
-<div class=" mx-auto space-y-8">
+<div class="max-w-7xl mx-auto space-y-8">
 
 <div x-data="{ show: false, message: '' }" x-show="show" x-transition 
      @show-toast.window="show = true; message = $event.detail.message; setTimeout(() => show = false, 3000)" 
@@ -65,20 +65,32 @@ new class extends Component {
     <livewire:admins.modules.edit />
     <livewire:admins.modules.delete />
 
-    <div class="grid grid-cols-1 sm:grid-cols-4 gap-2" wire:listen="refresh-list">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-3 sm:gap-6">
     @foreach ($modules as $module)
-    <div class="card border border-base-300 bg-base-100 dark:bg-zinc-800 dark:border-zinc-700 transition-all duration-300 transform group hover:scale-102 p-2">
-        <div class="card-body p-2">
-            <h2 class="card-title text-sm dark:text-white">{{ $module->name }}</h2>
-            <div class="card-actions justify-end">
-                <flux:button wire:click="edit({{ $module->id }})">Modifier</flux:button>
-                <flux:button variant="danger" wire:click="deleteData({{ $module->id }})" class="border border-white" :loading="false">Supprimer</flux:button>
-                </button>
+    <!-- Card -->
+    <a class="group flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl hover:text-fuchsia-600 hover:shadow-md focus:outline-hidden focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800">
+      <div class="p-4 md:p-5">
+        <div class="flex justify-between items-center gap-x-3">
+          <div class="grow">
+            <h3 class="group-hover:text-fuchsia-600 font-semibold text-gray-800 dark:group-hover:text-neutral-400 dark:text-neutral-200">
+              {{ $module->name }}
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-neutral-500">
+            Créer le  {{ \Carbon\Carbon::parse($module->created_at)->translatedFormat('d F Y') }}
+
+            </p>
+          </div>
+          <div class="card-actions justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                <flux:button icon="pencil" wire:click="edit({{ $module->id }})"></flux:button>
+                <flux:button icon="minus-circle" variant="danger" wire:click="deleteData({{ $module->id }})" class="dark:border dark:border-zinc-700" :loading="false"></flux:button>
             </div>
         </div>
-    </div>
+      </div>
+    </a>
+    <!-- End Card -->
     @endforeach
 </div>
+
 
 <div class="mt-8">
     {{ $modules->links('vendor.pagination.tailwind-not-round') }}
