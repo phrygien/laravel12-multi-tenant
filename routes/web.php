@@ -15,6 +15,7 @@ foreach (config('tenancy.central_domains') as $domain) {
             ->middleware(['auth', 'verified'])
             ->name('dashboard');
 
+            
         Route::middleware(['auth'])->group(function () {
             Route::redirect('settings', 'settings/profile');
 
@@ -32,6 +33,7 @@ foreach (config('tenancy.central_domains') as $domain) {
             });
         });
 
+        
         require __DIR__ . '/auth.php';
 
     });

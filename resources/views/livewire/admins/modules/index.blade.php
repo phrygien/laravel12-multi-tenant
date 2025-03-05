@@ -39,6 +39,8 @@ new class extends Component {
         $this->showConfirmModal = true;
     }
 
+  
+
     public function confirmDelete($id) {
         $this->showConfirmModal = true;
         $this->moduleName = Module::find($id)->name;
@@ -82,6 +84,7 @@ new class extends Component {
     </div>
     </div>
 
+    <
 
     <div class="grid grid-cols-1 sm:grid-cols-4 gap-2">
     @foreach ($modules as $module)
