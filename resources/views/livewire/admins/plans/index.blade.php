@@ -6,590 +6,1636 @@ new class extends Component {
     //
 }; ?>
 
-<div class="max-w-7xl mx-auto space-y-8">
-    <flux:heading level="3" size="xl">Tarifications</flux:heading>
-    <flux:subheading>This information will be displayed publicly.</flux:subheading>
+<div class="mx-auto space-y-8">
 
-  <div class="flex flex-col">
-    <div class="-m-1.5 overflow-x-auto">
-      <div class="p-1.5 min-w-full inline-block align-middle">
-        <div class="bg-white border border-gray-200 rounded-xl shadow-2xs overflow-hidden dark:bg-neutral-900 dark:border-neutral-700">
-          <!-- Header -->
-          <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 dark:border-neutral-700">
-            <div>
-              <h2 class="text-xl font-semibold text-gray-800 dark:text-neutral-200">
-                API Keys
-              </h2>
-              <p class="text-sm text-gray-600 dark:text-neutral-400">
-                Keys you have generated to connect with third-party clients or access the <a class="inline-flex items-center gap-x-1.5 text-blue-600 decoration-2 hover:underline focus:outline-hidden focus:underline font-medium dark:text-blue-500" href="#">Preline API.</a>
-              </p>
+<flux:heading size="xl" level="1">{{ __('Tarifications') }}</flux:heading>
+    <flux:subheading size="lg" class="mb-6">{{ __('Manage your profile and account settings') }}</flux:subheading>
+    <flux:separator variant="subtle" />
+
+<!-- Features -->
+<div class="overflow-hidden">
+  <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+
+    <div class="relative xl:w-10/12 xl:mx-auto">
+      <!-- Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        <div>
+          <!-- Card -->
+          <div class="p-4 relative z-10 bg-white border border-gray-200 rounded-xl md:p-10 dark:bg-neutral-900 dark:border-neutral-800">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-neutral-200">Professional</h3>
+            <div class="text-sm text-gray-500 dark:text-neutral-500">Everything a small team needs.</div>
+
+            <div class="mt-5">
+              <span class="text-6xl font-bold text-gray-800 dark:text-neutral-200">$18</span>
+              <span class="text-lg font-bold text-gray-800 dark:text-neutral-200">.00</span>
+              <span class="ms-3 text-gray-500 dark:text-neutral-500">USD / monthly</span>
             </div>
 
-            <div>
-              <div class="inline-flex gap-x-2">
-                <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
-                  View all
-                </a>
+            <div class="mt-5 grid sm:grid-cols-2 gap-y-2 py-4 first:pt-0 last:pb-0 sm:gap-x-6 sm:gap-y-0">
+              <!-- List -->
+              <ul class="space-y-2 text-sm sm:text-base">
+                <li class="flex gap-x-3">
+                  <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Up to 10 people
+                  </span>
+                </li>
 
-                <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
-                  <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
-                  Create
-                </a>
+                <li class="flex gap-x-3">
+                  <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Collect data
+                  </span>
+                </li>
+
+                <li class="flex gap-x-3">
+                  <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Code extensibility
+                  </span>
+                </li>
+              </ul>
+              <!-- End List -->
+
+              <!-- List -->
+              <ul class="space-y-2 text-sm sm:text-base">
+                <li class="flex gap-x-3">
+                  <span class="size-5 flex justify-center items-center rounded-full bg-gray-50 text-gray-500 dark:bg-neutral-800 dark:text-neutral-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Custom reports
+                  </span>
+                </li>
+
+                <li class="flex gap-x-3">
+                  <span class="size-5 flex justify-center items-center rounded-full bg-gray-50 text-gray-500 dark:bg-neutral-800 dark:text-neutral-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Product support
+                  </span>
+                </li>
+
+                <li class="flex gap-x-3">
+                  <span class="size-5 flex justify-center items-center rounded-full bg-gray-50 text-gray-500 dark:bg-neutral-800 dark:text-neutral-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Activity reporting
+                  </span>
+                </li>
+              </ul>
+              <!-- End List -->
+            </div>
+
+            <div class="mt-5 grid grid-cols-2 gap-x-4 py-4 first:pt-0 last:pb-0">
+              <div>
+                <p class="text-sm text-gray-500 dark:text-neutral-500">Cancel anytime.</p>
+                <p class="text-sm text-gray-500 dark:text-neutral-500">No card required.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">Start free trial</button>
               </div>
             </div>
           </div>
-          <!-- End Header -->
+          <!-- End Card -->
+        </div>
 
-          <!-- Table -->
-          <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700">
-            <thead class="bg-gray-50 dark:bg-neutral-900">
-              <tr>
-                <th scope="col" class="ps-6 py-3 text-start">
-                  <label for="hs-at-with-checkboxes-main" class="flex">
-                    <input type="checkbox" class="shrink-0 border-gray-300 rounded-sm text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="hs-at-with-checkboxes-main">
-                    <span class="sr-only">Checkbox</span>
-                  </label>
-                </th>
+        <div>
+          <!-- Card -->
+          <div class="p-4 relative z-10 bg-white border border-gray-200 rounded-xl md:p-10 dark:bg-neutral-900 dark:border-neutral-800">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-neutral-200">Professional</h3>
+            <div class="text-sm text-gray-500 dark:text-neutral-500">Everything a small team needs.</div>
 
-                <th scope="col" class="px-6 py-3 text-start">
-                  <div class="flex items-center gap-x-2">
-                    <span class="text-xs font-semibold uppercase text-gray-800 dark:text-neutral-200">
-                      Name
-                    </span>
-                  </div>
-                </th>
-
-                <th scope="col" class="px-6 py-3 text-start">
-                  <div class="flex items-center gap-x-2">
-                    <span class="text-xs font-semibold uppercase text-gray-800 dark:text-neutral-200">
-                      Created by
-                    </span>
-                  </div>
-                </th>
-
-                <th scope="col" class="px-6 py-3 text-start">
-                  <div class="flex items-center gap-x-2">
-                    <span class="text-xs font-semibold uppercase text-gray-800 dark:text-neutral-200">
-                      API Key
-                    </span>
-                  </div>
-                </th>
-
-                <th scope="col" class="px-6 py-3 text-start">
-                  <div class="flex items-center gap-x-2">
-                    <span class="text-xs font-semibold uppercase text-gray-800 dark:text-neutral-200">
-                      Status
-                    </span>
-                  </div>
-                </th>
-
-                <th scope="col" class="px-6 py-3 text-start">
-                  <div class="flex items-center gap-x-2">
-                    <span class="text-xs font-semibold uppercase text-gray-800 dark:text-neutral-200">
-                      Created
-                    </span>
-                  </div>
-                </th>
-
-                <th scope="col" class="px-6 py-3 text-end"></th>
-              </tr>
-            </thead>
-
-            <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
-              <tr>
-                <td class="size-px whitespace-nowrap">
-                  <div class="ps-6 py-3">
-                    <label for="hs-at-with-checkboxes-1" class="flex">
-                      <input type="checkbox" class="shrink-0 border-gray-300 rounded-sm text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="hs-at-with-checkboxes-1">
-                      <span class="sr-only">Checkbox</span>
-                    </label>
-                  </div>
-                </td>
-
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <span class="text-sm text-gray-600 dark:text-neutral-400">Streamlab</span>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <div class="flex items-center gap-x-2">
-                      <img class="inline-block size-6 rounded-full" src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80" alt="Avatar">
-                      <div class="grow">
-                        <span class="text-sm text-gray-600 dark:text-neutral-400">Christina Bersh</span>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-xs rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
-                      Copy Key
-                      <svg class="shrink-0 size-4 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
-                    </button>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
-                      <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                      </svg>
-                      Successful
-                    </span>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <span class="text-sm text-gray-600 dark:text-neutral-400">28 Dec, 12:12</span>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-1.5">
-                    <div class="hs-dropdown [--placement:bottom-right] relative inline-block">
-                      <button id="hs-table-dropdown-1" type="button" class="hs-dropdown-toggle py-1.5 px-2 inline-flex justify-center items-center gap-2 rounded-lg text-gray-700 align-middle disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:text-neutral-400 dark:hover:text-white dark:focus:ring-offset-gray-800" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
-                      </button>
-                      <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden divide-y divide-gray-200 min-w-40 z-10 bg-white shadow-2xl rounded-lg p-2 mt-2 dark:divide-neutral-700 dark:bg-neutral-800 dark:border dark:border-neutral-700" role="menu" aria-orientation="vertical" aria-labelledby="hs-table-dropdown-1">
-                        <div class="py-2 first:pt-0 last:pb-0">
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Rename
-                          </a>
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Regenrate Key
-                          </a>
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Disable
-                          </a>
-                        </div>
-                        <div class="py-2 first:pt-0 last:pb-0">
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-red-600 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-red-500 dark:hover:bg-neutral-700" href="#">
-                            Delete
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="size-px whitespace-nowrap">
-                  <div class="ps-6 py-3">
-                    <label for="hs-at-with-checkboxes-2" class="flex">
-                      <input type="checkbox" class="shrink-0 border-gray-300 rounded-sm text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="hs-at-with-checkboxes-2">
-                      <span class="sr-only">Checkbox</span>
-                    </label>
-                  </div>
-                </td>
-
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <span class="text-sm text-gray-600 dark:text-neutral-400">Node</span>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <div class="flex items-center gap-x-2">
-                      <img class="inline-block size-6 rounded-full" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80" alt="Avatar">
-                      <div class="grow">
-                        <span class="text-sm text-gray-600 dark:text-neutral-400">David Harrison</span>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-xs rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
-                      Copy Key
-                      <svg class="shrink-0 size-4 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
-                    </button>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <span class="inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-green-200">
-                      <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
-                      </svg>
-                      Warning
-                    </span>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <span class="text-sm text-gray-600 dark:text-neutral-400">20 Dec, 09:27</span>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-1.5">
-                    <div class="hs-dropdown [--placement:bottom-right] relative inline-block">
-                      <button id="hs-table-dropdown-2" type="button" class="hs-dropdown-toggle py-1.5 px-2 inline-flex justify-center items-center gap-2 rounded-lg text-gray-700 align-middle disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:text-neutral-400 dark:hover:text-white dark:focus:ring-offset-gray-800" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
-                      </button>
-                      <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden divide-y divide-gray-200 min-w-40 z-10 bg-white shadow-2xl rounded-lg p-2 mt-2 dark:divide-neutral-700 dark:bg-neutral-800 dark:border dark:border-neutral-700" role="menu" aria-orientation="vertical" aria-labelledby="hs-table-dropdown-2">
-                        <div class="py-2 first:pt-0 last:pb-0">
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Rename
-                          </a>
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Regenrate Key
-                          </a>
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Disable
-                          </a>
-                        </div>
-                        <div class="py-2 first:pt-0 last:pb-0">
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-red-600 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-red-500 dark:hover:bg-neutral-700" href="#">
-                            Delete
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="size-px whitespace-nowrap">
-                  <div class="ps-6 py-3">
-                    <label for="hs-at-with-checkboxes-3" class="flex">
-                      <input type="checkbox" class="shrink-0 border-gray-300 rounded-sm text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="hs-at-with-checkboxes-3">
-                      <span class="sr-only">Checkbox</span>
-                    </label>
-                  </div>
-                </td>
-
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <span class="text-sm text-gray-600 dark:text-neutral-400">FrontMail</span>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <div class="flex items-center gap-x-2">
-                      <span class="inline-flex items-center justify-center size-6 rounded-full bg-gray-300 dark:bg-neutral-700">
-                        <span class="text-xs font-medium text-gray-800 dark:text-neutral-200">A</span>
-                      </span>
-                      <div class="grow">
-                        <span class="text-sm text-gray-600 dark:text-neutral-400">Anne Richard</span>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-xs rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
-                      Copy Key
-                      <svg class="shrink-0 size-4 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
-                    </button>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
-                      <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                      </svg>
-                      Successful
-                    </span>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <span class="text-sm text-gray-600 dark:text-neutral-400">18 Dec, 15:20</span>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-1.5">
-                    <div class="hs-dropdown [--placement:bottom-right] relative inline-block">
-                      <button id="hs-table-dropdown-3" type="button" class="hs-dropdown-toggle py-1.5 px-2 inline-flex justify-center items-center gap-2 rounded-lg text-gray-700 align-middle disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:text-neutral-400 dark:hover:text-white dark:focus:ring-offset-gray-800" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
-                      </button>
-                      <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden divide-y divide-gray-200 min-w-40 z-10 bg-white shadow-2xl rounded-lg p-2 mt-2 dark:divide-neutral-700 dark:bg-neutral-800 dark:border dark:border-neutral-700" role="menu" aria-orientation="vertical" aria-labelledby="hs-table-dropdown-3">
-                        <div class="py-2 first:pt-0 last:pb-0">
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Rename
-                          </a>
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Regenrate Key
-                          </a>
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Disable
-                          </a>
-                        </div>
-                        <div class="py-2 first:pt-0 last:pb-0">
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-red-600 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-red-500 dark:hover:bg-neutral-700" href="#">
-                            Delete
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="size-px whitespace-nowrap">
-                  <div class="ps-6 py-3">
-                    <label for="hs-at-with-checkboxes-4" class="flex">
-                      <input type="checkbox" class="shrink-0 border-gray-300 rounded-sm text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="hs-at-with-checkboxes-4">
-                      <span class="sr-only">Checkbox</span>
-                    </label>
-                  </div>
-                </td>
-
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <span class="text-sm text-gray-600 dark:text-neutral-400">MobileAPI</span>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <div class="flex items-center gap-x-2">
-                      <img class="inline-block size-6 rounded-full" src="https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80" alt="Avatar">
-                      <div class="grow">
-                        <span class="text-sm text-gray-600 dark:text-neutral-400">Samia Kartoon</span>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-xs rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
-                      Copy Key
-                      <svg class="shrink-0 size-4 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
-                    </button>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
-                      <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                      </svg>
-                      Successful
-                    </span>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <span class="text-sm text-gray-600 dark:text-neutral-400">18 Dec, 15:20</span>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-1.5">
-                    <div class="hs-dropdown [--placement:bottom-right] relative inline-block">
-                      <button id="hs-table-dropdown-4" type="button" class="hs-dropdown-toggle py-1.5 px-2 inline-flex justify-center items-center gap-2 rounded-lg text-gray-700 align-middle disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:text-neutral-400 dark:hover:text-white dark:focus:ring-offset-gray-800" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
-                      </button>
-                      <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden divide-y divide-gray-200 min-w-40 z-10 bg-white shadow-2xl rounded-lg p-2 mt-2 dark:divide-neutral-700 dark:bg-neutral-800 dark:border dark:border-neutral-700" role="menu" aria-orientation="vertical" aria-labelledby="hs-table-dropdown-4">
-                        <div class="py-2 first:pt-0 last:pb-0">
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Rename
-                          </a>
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Regenrate Key
-                          </a>
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Disable
-                          </a>
-                        </div>
-                        <div class="py-2 first:pt-0 last:pb-0">
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-red-600 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-red-500 dark:hover:bg-neutral-700" href="#">
-                            Delete
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="size-px whitespace-nowrap">
-                  <div class="ps-6 py-3">
-                    <label for="hs-at-with-checkboxes-5" class="flex">
-                      <input type="checkbox" class="shrink-0 border-gray-300 rounded-sm text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="hs-at-with-checkboxes-5">
-                      <span class="sr-only">Checkbox</span>
-                    </label>
-                  </div>
-                </td>
-
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <span class="text-sm text-gray-600 dark:text-neutral-400">RachelsKey</span>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <div class="flex items-center gap-x-2">
-                      <span class="inline-flex items-center justify-center size-6 rounded-full bg-gray-300 dark:bg-neutral-700">
-                        <span class="text-xs font-medium text-gray-800 dark:text-neutral-200">D</span>
-                      </span>
-                      <div class="grow">
-                        <span class="text-sm text-gray-600 dark:text-neutral-400">David Harrison</span>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-xs rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
-                      Copy Key
-                      <svg class="shrink-0 size-4 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
-                    </button>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <span class="inline-flex items-center gap-1.5 py-0.5 px-2 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-green-200">
-                      <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"></path>
-                      </svg>
-                      Danger
-                    </span>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <span class="text-sm text-gray-600 dark:text-neutral-400">15 Dec, 14:41</span>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-1.5">
-                    <div class="hs-dropdown [--placement:bottom-right] relative inline-block">
-                      <button id="hs-table-dropdown-5" type="button" class="hs-dropdown-toggle py-1.5 px-2 inline-flex justify-center items-center gap-2 rounded-lg text-gray-700 align-middle disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:text-neutral-400 dark:hover:text-white dark:focus:ring-offset-gray-800" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
-                      </button>
-                      <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden divide-y divide-gray-200 min-w-40 z-10 bg-white shadow-2xl rounded-lg p-2 mt-2 dark:divide-neutral-700 dark:bg-neutral-800 dark:border dark:border-neutral-700" role="menu" aria-orientation="vertical" aria-labelledby="hs-table-dropdown-5">
-                        <div class="py-2 first:pt-0 last:pb-0">
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Rename
-                          </a>
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Regenrate Key
-                          </a>
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Disable
-                          </a>
-                        </div>
-                        <div class="py-2 first:pt-0 last:pb-0">
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-red-600 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-red-500 dark:hover:bg-neutral-700" href="#">
-                            Delete
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="size-px whitespace-nowrap">
-                  <div class="ps-6 py-3">
-                    <label for="hs-at-with-checkboxes-6" class="flex">
-                      <input type="checkbox" class="shrink-0 border-gray-300 rounded-sm text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="hs-at-with-checkboxes-6">
-                      <span class="sr-only">Checkbox</span>
-                    </label>
-                  </div>
-                </td>
-
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <span class="text-sm text-gray-600 dark:text-neutral-400">Gulp</span>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <div class="flex items-center gap-x-2">
-                      <img class="inline-block size-6 rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80" alt="Avatar">
-                      <div class="grow">
-                        <span class="text-sm text-gray-600 dark:text-neutral-400">Brian Halligan</span>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-xs rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
-                      Copy Key
-                      <svg class="shrink-0 size-4 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
-                    </button>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
-                      <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                      </svg>
-                      Successful
-                    </span>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-3">
-                    <span class="text-sm text-gray-600 dark:text-neutral-400">11 Dec, 18:51</span>
-                  </div>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-1.5">
-                    <div class="hs-dropdown [--placement:bottom-right] relative inline-block">
-                      <button id="hs-table-dropdown-6" type="button" class="hs-dropdown-toggle py-1.5 px-2 inline-flex justify-center items-center gap-2 rounded-lg text-gray-700 align-middle disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:text-neutral-400 dark:hover:text-white dark:focus:ring-offset-gray-800" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
-                      </button>
-                      <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden divide-y divide-gray-200 min-w-40 z-10 bg-white shadow-2xl rounded-lg p-2 mt-2 dark:divide-neutral-700 dark:bg-neutral-800 dark:border dark:border-neutral-700" role="menu" aria-orientation="vertical" aria-labelledby="hs-table-dropdown-6">
-                        <div class="py-2 first:pt-0 last:pb-0">
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Rename
-                          </a>
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Regenrate Key
-                          </a>
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Disable
-                          </a>
-                        </div>
-                        <div class="py-2 first:pt-0 last:pb-0">
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-red-600 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-red-500 dark:hover:bg-neutral-700" href="#">
-                            Delete
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <!-- End Table -->
-
-          <!-- Footer -->
-          <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-t border-gray-200 dark:border-neutral-700">
-            <div>
-              <p class="text-sm text-gray-600 dark:text-neutral-400">
-                <span class="font-semibold text-gray-800 dark:text-neutral-200">6</span> results
-              </p>
+            <div class="mt-5">
+              <span class="text-6xl font-bold text-gray-800 dark:text-neutral-200">$18</span>
+              <span class="text-lg font-bold text-gray-800 dark:text-neutral-200">.00</span>
+              <span class="ms-3 text-gray-500 dark:text-neutral-500">USD / monthly</span>
             </div>
 
-            <div>
-              <div class="inline-flex gap-x-2">
-                <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
-                  <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                  Prev
-                </button>
+            <div class="mt-5 grid sm:grid-cols-2 gap-y-2 py-4 first:pt-0 last:pb-0 sm:gap-x-6 sm:gap-y-0">
+              <!-- List -->
+              <ul class="space-y-2 text-sm sm:text-base">
+                <li class="flex gap-x-3">
+                  <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Up to 10 people
+                  </span>
+                </li>
 
-                <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
-                  Next
-                  <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-                </button>
+                <li class="flex gap-x-3">
+                  <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Collect data
+                  </span>
+                </li>
+
+                <li class="flex gap-x-3">
+                  <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Code extensibility
+                  </span>
+                </li>
+              </ul>
+              <!-- End List -->
+
+              <!-- List -->
+              <ul class="space-y-2 text-sm sm:text-base">
+                <li class="flex gap-x-3">
+                  <span class="size-5 flex justify-center items-center rounded-full bg-gray-50 text-gray-500 dark:bg-neutral-800 dark:text-neutral-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Custom reports
+                  </span>
+                </li>
+
+                <li class="flex gap-x-3">
+                  <span class="size-5 flex justify-center items-center rounded-full bg-gray-50 text-gray-500 dark:bg-neutral-800 dark:text-neutral-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Product support
+                  </span>
+                </li>
+
+                <li class="flex gap-x-3">
+                  <span class="size-5 flex justify-center items-center rounded-full bg-gray-50 text-gray-500 dark:bg-neutral-800 dark:text-neutral-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Activity reporting
+                  </span>
+                </li>
+              </ul>
+              <!-- End List -->
+            </div>
+
+            <div class="mt-5 grid grid-cols-2 gap-x-4 py-4 first:pt-0 last:pb-0">
+              <div>
+                <p class="text-sm text-gray-500 dark:text-neutral-500">Cancel anytime.</p>
+                <p class="text-sm text-gray-500 dark:text-neutral-500">No card required.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">Start free trial</button>
               </div>
             </div>
           </div>
-          <!-- End Footer -->
+          <!-- End Card -->
+        </div>
+
+        <div>
+          <!-- Card -->
+          <div class="p-4 relative z-10 bg-white border border-gray-200 rounded-xl md:p-10 dark:bg-neutral-900 dark:border-neutral-800">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-neutral-200">Professional</h3>
+            <div class="text-sm text-gray-500 dark:text-neutral-500">Everything a small team needs.</div>
+
+            <div class="mt-5">
+              <span class="text-6xl font-bold text-gray-800 dark:text-neutral-200">$18</span>
+              <span class="text-lg font-bold text-gray-800 dark:text-neutral-200">.00</span>
+              <span class="ms-3 text-gray-500 dark:text-neutral-500">USD / monthly</span>
+            </div>
+
+            <div class="mt-5 grid sm:grid-cols-2 gap-y-2 py-4 first:pt-0 last:pb-0 sm:gap-x-6 sm:gap-y-0">
+              <!-- List -->
+              <ul class="space-y-2 text-sm sm:text-base">
+                <li class="flex gap-x-3">
+                  <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Up to 10 people
+                  </span>
+                </li>
+
+                <li class="flex gap-x-3">
+                  <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Collect data
+                  </span>
+                </li>
+
+                <li class="flex gap-x-3">
+                  <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Code extensibility
+                  </span>
+                </li>
+              </ul>
+              <!-- End List -->
+
+              <!-- List -->
+              <ul class="space-y-2 text-sm sm:text-base">
+                <li class="flex gap-x-3">
+                  <span class="size-5 flex justify-center items-center rounded-full bg-gray-50 text-gray-500 dark:bg-neutral-800 dark:text-neutral-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Custom reports
+                  </span>
+                </li>
+
+                <li class="flex gap-x-3">
+                  <span class="size-5 flex justify-center items-center rounded-full bg-gray-50 text-gray-500 dark:bg-neutral-800 dark:text-neutral-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Product support
+                  </span>
+                </li>
+
+                <li class="flex gap-x-3">
+                  <span class="size-5 flex justify-center items-center rounded-full bg-gray-50 text-gray-500 dark:bg-neutral-800 dark:text-neutral-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Activity reporting
+                  </span>
+                </li>
+              </ul>
+              <!-- End List -->
+            </div>
+
+            <div class="mt-5 grid grid-cols-2 gap-x-4 py-4 first:pt-0 last:pb-0">
+              <div>
+                <p class="text-sm text-gray-500 dark:text-neutral-500">Cancel anytime.</p>
+                <p class="text-sm text-gray-500 dark:text-neutral-500">No card required.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">Start free trial</button>
+              </div>
+            </div>
+          </div>
+          <!-- End Card -->
+        </div>
+        
+        <div>
+          <!-- Card -->
+          <div class="shadow-xl shadow-gray-200 p-5 relative z-10 bg-white border border-gray-200 rounded-xl md:p-10 dark:bg-neutral-900 dark:border-neutral-800 dark:shadow-gray-900/20">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-neutral-200">Teams</h3>
+            <div class="text-sm text-gray-500 dark:text-neutral-500">For growing businesses.</div>
+            <span class="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-gray-800 text-white py-1.5 px-3 dark:bg-white dark:text-neutral-800">Most popular</span>
+
+            <div class="mt-5">
+              <span class="text-6xl font-bold text-gray-800 dark:text-neutral-200">$36</span>
+              <span class="text-lg font-bold text-gray-800 dark:text-neutral-200">.99</span>
+              <span class="ms-3 text-gray-500 dark:text-neutral-500">USD / monthly</span>
+            </div>
+
+            <div class="mt-5 grid sm:grid-cols-2 gap-y-2 py-4 first:pt-0 last:pb-0 sm:gap-x-6 sm:gap-y-0">
+              <!-- List -->
+              <ul class="space-y-2 text-sm sm:text-base">
+                <li class="flex gap-x-3">
+                  <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Up to 10 people
+                  </span>
+                </li>
+
+                <li class="flex gap-x-3">
+                  <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Collect data
+                  </span>
+                </li>
+
+                <li class="flex gap-x-3">
+                  <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Code extensibility
+                  </span>
+                </li>
+              </ul>
+              <!-- End List -->
+
+              <!-- List -->
+              <ul class="space-y-2 text-sm sm:text-base">
+                <li class="flex gap-x-3">
+                  <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Custom reports
+                  </span>
+                </li>
+
+                <li class="flex gap-x-3">
+                  <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Product support
+                  </span>
+                </li>
+
+                <li class="flex gap-x-3">
+                  <span class="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-800/30 dark:text-blue-500">
+                    <svg class="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <span class="text-gray-800 dark:text-neutral-200">
+                    Activity reporting
+                  </span>
+                </li>
+              </ul>
+              <!-- End List -->
+            </div>
+
+            <div class="mt-5 grid grid-cols-2 gap-x-4 py-4 first:pt-0 last:pb-0">
+              <div>
+                <p class="text-sm text-gray-500 dark:text-neutral-500">Cancel anytime.</p>
+                <p class="text-sm text-gray-500 dark:text-neutral-500">No card required.</p>
+              </div>
+
+              <div class="flex justify-end">
+                <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">Start free trial</button>
+              </div>
+            </div>
+          </div>
+          <!-- End Card -->
         </div>
       </div>
+      <!-- End Grid -->
+
+      <!-- SVG Element -->
+      <div class="hidden md:block absolute top-0 end-0 translate-y-16 translate-x-16">
+        <svg class="w-16 h-auto text-orange-500" width="121" height="135" viewBox="0 0 121 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 16.4754C11.7688 27.4499 21.2452 57.3224 5 89.0164" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
+          <path d="M33.6761 112.104C44.6984 98.1239 74.2618 57.6776 83.4821 5" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
+          <path d="M50.5525 130C68.2064 127.495 110.731 117.541 116 78.0874" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <!-- End SVG Element -->
+
+      <!-- SVG Element -->
+      <div class="hidden md:block absolute bottom-0 start-0 translate-y-16 -translate-x-16">
+        <svg class="w-56 h-auto text-cyan-500" width="347" height="188" viewBox="0 0 347 188" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 82.4591C54.7956 92.8751 30.9771 162.782 68.2065 181.385C112.642 203.59 127.943 78.57 122.161 25.5053C120.504 2.2376 93.4028 -8.11128 89.7468 25.5053C85.8633 61.2125 130.186 199.678 180.982 146.248L214.898 107.02C224.322 95.4118 242.9 79.2851 258.6 107.02C274.299 134.754 299.315 125.589 309.861 117.539L343 93.4426" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <!-- End SVG Element -->
+    </div>
+
+    <div class="mt-7 text-center">
+      <p class="text-xs text-gray-400">
+        Prices in USD. Taxes may apply.
+      </p>
     </div>
   </div>
+</div>
+<!-- End Features -->
+
+<!-- Comparison Table -->
+<div class="relative">
+  <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 md:py-14 lg:py-20 mx-auto">
+    <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+      <h2 class="text-2xl font-bold md:text-3xl md:leading-tight dark:text-white">Compare plans</h2>
+    </div>
+
+    <!-- Header -->
+    <div class="hidden lg:block sticky top-0 start-0 py-2 bg-white/60 backdrop-blur-md dark:bg-neutral-900/60">
+      <!-- Grid -->
+      <div class="grid grid-cols-6 gap-6">
+        <div class="col-span-2">
+          <span class="font-semibold text-lg text-gray-800 dark:text-neutral-200">
+            Features
+          </span>
+        </div>
+        <!-- End Col -->
+
+        <div class="col-span-1">
+          <span class="font-semibold text-lg text-gray-800 dark:text-neutral-200">
+            Free
+          </span>
+          <p class="mt-2 text-sm text-gray-500 dark:text-neutral-500">
+            Free forever
+          </p>
+        </div>
+        <!-- End Col -->
+
+        <div class="col-span-1">
+          <span class="font-semibold text-lg text-gray-800 dark:text-neutral-200">
+            Startup
+          </span>
+          <p class="mt-2 text-sm text-gray-500 dark:text-neutral-500">
+            $39 per month billed annually
+          </p>
+        </div>
+        <!-- End Col -->
+
+        <div class="col-span-1">
+          <span class="font-semibold text-lg text-gray-800 dark:text-neutral-200">
+            Team
+          </span>
+          <p class="mt-2 text-sm text-gray-500 dark:text-neutral-500">
+            $89 per month billed annually
+          </p>
+        </div>
+        <!-- End Col -->
+
+        <div class="col-span-1">
+          <span class="font-semibold text-lg text-gray-800 dark:text-neutral-200">
+            Enterprise
+          </span>
+          <p class="mt-2 text-sm text-gray-500 dark:text-neutral-500">
+            $149 per month billed annually
+          </p>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Grid -->
+    </div>
+    <!-- End Header -->
+
+    <!-- Section -->
+    <div class="space-y-4 lg:space-y-0">
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 lg:py-3">
+          <span class="text-lg font-semibold text-gray-800 dark:text-neutral-200">
+            General
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="hidden lg:block lg:col-span-1 py-1.5 lg:py-3 px-4 lg:px-0 lg:text-center">
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="hidden lg:block lg:col-span-1 py-1.5 lg:py-3 px-4 lg:px-0 lg:text-center">
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="hidden lg:block lg:col-span-1 py-1.5 lg:py-3 px-4 lg:px-0 lg:text-center">
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="hidden lg:block lg:col-span-1 py-1.5 lg:py-3 px-4 lg:px-0 lg:text-center">
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 pb-1.5 lg:py-3">
+          <span class="font-semibold lg:font-normal text-sm text-gray-800 dark:text-neutral-200">
+            Number of seats
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Free
+            </span>
+            <span class="text-sm text-gray-800 dark:text-neutral-200">
+              1
+            </span>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Startup
+            </span>
+            <span class="text-sm text-gray-800 dark:text-neutral-200">
+              Up to 3
+            </span>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Team
+            </span>
+            <span class="text-sm text-gray-800 dark:text-neutral-200">
+              Up to 10
+            </span>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Enterprise
+            </span>
+            <span class="text-sm text-gray-800 dark:text-neutral-200">
+              Unlimited
+            </span>
+          </div>
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 pb-1.5 lg:py-3">
+          <span class="font-semibold lg:font-normal text-sm text-gray-800 dark:text-neutral-200">
+            Storage
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Free
+            </span>
+            <span class="text-sm text-gray-800 dark:text-neutral-200">
+              15 GB
+            </span>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Startup
+            </span>
+            <span class="text-sm text-gray-800 dark:text-neutral-200">
+              1 TB
+            </span>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Team
+            </span>
+            <span class="text-sm text-gray-800 dark:text-neutral-200">
+              15 TB
+            </span>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Enterprise
+            </span>
+            <span class="text-sm text-gray-800 dark:text-neutral-200">
+              Unlimited
+            </span>
+          </div>
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 pb-1.5 lg:py-3">
+          <span class="font-semibold lg:font-normal text-sm text-gray-800 dark:text-neutral-200">
+            Email sharing
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Free
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Startup
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Team
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Enterprise
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 pb-1.5 lg:py-3">
+          <span class="font-semibold lg:font-normal text-sm text-gray-800 dark:text-neutral-200">
+            Any time, anywhere access
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Free
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Startup
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Team
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Enterprise
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+    </div>
+    <!-- End Section -->
+
+    <!-- Section -->
+    <div class="mt-6 space-y-4 lg:space-y-0">
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 lg:py-3">
+          <span class="text-lg font-semibold text-gray-800 dark:text-neutral-200">
+            Financial data
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="hidden lg:block lg:col-span-1 py-1.5 lg:py-3 px-4 lg:px-0 lg:text-center">
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="hidden lg:block lg:col-span-1 py-1.5 lg:py-3 px-4 lg:px-0 lg:text-center">
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="hidden lg:block lg:col-span-1 py-1.5 lg:py-3 px-4 lg:px-0 lg:text-center">
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="hidden lg:block lg:col-span-1 py-1.5 lg:py-3 px-4 lg:px-0 lg:text-center">
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 pb-1.5 lg:py-3">
+          <span class="font-semibold lg:font-normal text-sm text-gray-800 dark:text-neutral-200">
+            Open/High/Low/Close
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Free
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Startup
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Team
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Enterprise
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 pb-1.5 lg:py-3">
+          <span class="font-semibold lg:font-normal text-sm text-gray-800 dark:text-neutral-200">
+            Price-volume difference indicator
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Free
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Startup
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Team
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Enterprise
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+    </div>
+    <!-- End Section -->
+
+    <!-- Section -->
+    <div class="mt-6 space-y-4 lg:space-y-0">
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 lg:py-3">
+          <span class="text-lg font-semibold text-gray-800 dark:text-neutral-200">
+            On-chain data
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="hidden lg:block lg:col-span-1 py-1.5 lg:py-3 px-4 lg:px-0 lg:text-center">
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="hidden lg:block lg:col-span-1 py-1.5 lg:py-3 px-4 lg:px-0 lg:text-center">
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="hidden lg:block lg:col-span-1 py-1.5 lg:py-3 px-4 lg:px-0 lg:text-center">
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="hidden lg:block lg:col-span-1 py-1.5 lg:py-3 px-4 lg:px-0 lg:text-center">
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 pb-1.5 lg:py-3">
+          <span class="font-semibold lg:font-normal text-sm text-gray-800 dark:text-neutral-200">
+            Network growth
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Free
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Startup
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Team
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Enterprise
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 pb-1.5 lg:py-3">
+          <span class="font-semibold lg:font-normal text-sm text-gray-800 dark:text-neutral-200">
+            Average token age consumed
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Free
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Startup
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Team
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Enterprise
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 pb-1.5 lg:py-3">
+          <span class="font-semibold lg:font-normal text-sm text-gray-800 dark:text-neutral-200">
+            Exchange flow
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Free
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Startup
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Team
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Enterprise
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 pb-1.5 lg:py-3">
+          <span class="font-semibold lg:font-normal text-sm text-gray-800 dark:text-neutral-200">
+            Total ERC20 exchange funds flow
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Free
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Startup
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Team
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Enterprise
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 pb-1.5 lg:py-3">
+          <span class="font-semibold lg:font-normal text-sm text-gray-800 dark:text-neutral-200">
+            Transaction volume
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Free
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Startup
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Team
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Enterprise
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 pb-1.5 lg:py-3">
+          <span class="font-semibold lg:font-normal text-sm text-gray-800 dark:text-neutral-200">
+            Total circulation (beta)
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Free
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Startup
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Team
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Enterprise
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 pb-1.5 lg:py-3">
+          <span class="font-semibold lg:font-normal text-sm text-gray-800 dark:text-neutral-200">
+            Velocity of tokens (beta)
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Free
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Startup
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Team
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Enterprise
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 pb-1.5 lg:py-3">
+          <span class="font-semibold lg:font-normal text-sm text-gray-800 dark:text-neutral-200">
+            ETH gas used
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Free
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Startup
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Team
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Enterprise
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+    </div>
+    <!-- End Section -->
+
+    <!-- Section -->
+    <div class="mt-6 space-y-4 lg:space-y-0">
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 lg:py-3">
+          <span class="text-lg font-semibold text-gray-800 dark:text-neutral-200">
+            Social data
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="hidden lg:block lg:col-span-1 py-1.5 lg:py-3 px-4 lg:px-0 lg:text-center">
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="hidden lg:block lg:col-span-1 py-1.5 lg:py-3 px-4 lg:px-0 lg:text-center">
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="hidden lg:block lg:col-span-1 py-1.5 lg:py-3 px-4 lg:px-0 lg:text-center">
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="hidden lg:block lg:col-span-1 py-1.5 lg:py-3 px-4 lg:px-0 lg:text-center">
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 pb-1.5 lg:py-3">
+          <span class="font-semibold lg:font-normal text-sm text-gray-800 dark:text-neutral-200">
+            Dev activity
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Free
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Startup
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Team
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Enterprise
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 pb-1.5 lg:py-3">
+          <span class="font-semibold lg:font-normal text-sm text-gray-800 dark:text-neutral-200">
+            Topic search
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Free
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Startup
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Team
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Enterprise
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+
+      <!-- List -->
+      <ul class="grid lg:grid-cols-6 lg:gap-6">
+        <!-- Item -->
+        <li class="lg:col-span-2 pb-1.5 lg:py-3">
+          <span class="font-semibold lg:font-normal text-sm text-gray-800 dark:text-neutral-200">
+            Relative social dominance
+          </span>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Free
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Startup
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Team
+            </span>
+            <svg class="shrink-0 size-5 text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+
+        <!-- Item -->
+        <li class="col-span-1 py-1.5 lg:py-3 border-b border-gray-200 dark:border-neutral-800">
+          <div class="grid grid-cols-2 md:grid-cols-6 lg:block">
+            <span class="lg:hidden md:col-span-2 text-sm text-gray-800 dark:text-neutral-200">
+              Enterprise
+            </span>
+            <svg class="shrink-0 size-5 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </li>
+        <!-- End Item -->
+      </ul>
+      <!-- End List -->
+    </div>
+    <!-- End Section -->
+
+    <!-- Header -->
+    <div class="hidden lg:block mt-6">
+      <!-- Grid -->
+      <div class="grid grid-cols-6 gap-6">
+        <div class="col-span-2">
+        </div>
+        <!-- End Col -->
+
+        <div class="col-span-1">
+          <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+            Get started
+          </a>
+        </div>
+        <!-- End Col -->
+
+        <div class="col-span-1">
+          <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
+            Get started
+          </a>
+        </div>
+        <!-- End Col -->
+
+        <div class="col-span-1">
+          <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+            Get started
+          </a>
+        </div>
+        <!-- End Col -->
+
+        <div class="col-span-1">
+          <a class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800" href="#">
+            Get started
+          </a>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Grid -->
+    </div>
+    <!-- End Header -->
+
+    <!-- Button Group -->
+    <div class="mt-8 md:mt-12 flex justify-center items-center gap-x-3">
+      <p class="text-sm text-gray-500 dark:text-neutral-400">
+        Need a custom plan?
+      </p>
+
+      <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-50 dark:bg-transparent dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
+        Contact us
+      </button>
+    </div>
+    <!-- End Button Group -->
+  </div>
+</div>
+<!-- End Comparison Table -->
 </div>
