@@ -17,7 +17,7 @@ new class extends Component {
     #[On('refresh-list')]
     public function modules(): LengthAwarePaginator
     {
-        return Module::where('name', 'like', '%'.$this->query.'%')->orderByDesc('id')->paginate(perPage: 18);
+        return Module::where('name', 'like', '%'.$this->query.'%')->orderByDesc('id')->paginate(perPage: 39);
     }
 
     public function edit($id)
@@ -56,18 +56,14 @@ new class extends Component {
     <div class="mt-4 flex md:mt-0 md:ml-4">
         <flux:input icon="magnifying-glass" placeholder="Search modules" class="mr-3 flex-1 min-w-0 " wire:model.live="query" />
         <flux:modal.trigger name="create-module">
-            <flux:button>Ajouter un module</flux:button>
+            <flux:button variant="primary">Ajouter un module</flux:button>
         </flux:modal.trigger>
     </div>
     </div>
 
-<<<<<<< HEAD
-    <
-=======
     <livewire:admins.modules.create />
     <livewire:admins.modules.edit />
     <livewire:admins.modules.delete />
->>>>>>> b3a1d14b72d711e7ab5a6f28ca82b130af5478ae
 
     <div class="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-3 sm:gap-6">
     @foreach ($modules as $module)

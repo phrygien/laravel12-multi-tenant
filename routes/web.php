@@ -30,6 +30,9 @@ foreach (config('tenancy.central_domains') as $domain) {
                 Route::view('/modules/create', 'pages.admins.modules.create')->name('modules.create');
 
                 Route::view('plans', 'pages.admins.plans.index')->name('admin.plans');
+                Route::get('/plans/{id}/edit', function ($id) {
+                    return view('pages.admins.plans.edit', ['id' => $id]);
+                })->name('plans.edit');
             });
         });
 

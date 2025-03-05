@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('name')->unique();
             $table->integer('price')->default(0);
             $table->boolean('have_trial')->default(true);
+            $table->text('description')->nullable();
+            $table->boolean('is_popular')->default(false);
             $table->timestamps();
         });
     }
