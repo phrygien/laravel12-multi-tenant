@@ -12,6 +12,7 @@ class Edit extends Component
 {
     public $moduleId;
     public string $name;
+    public $status;
 
     public function render()
     {
@@ -24,6 +25,7 @@ class Edit extends Component
         $module = Module::find($id);
         $this->moduleId = $id;
         $this->name = $module->name;
+        $this->status = $module->status;
         Flux::modal('edit-module')->show();
     }
 
@@ -36,6 +38,7 @@ class Edit extends Component
         $module = Module::find($this->moduleId)->update(['name' => $this->name]);
 
         $this->dispatch('refresh-list');
+        $this->dispatch('show-toast', message: 'Module mis à jour avec succès.');
         Flux::modal('edit-module')->close();
     }
 }

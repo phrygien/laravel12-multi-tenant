@@ -7,6 +7,8 @@
                 </div>
 
                 <flux:input label="Nom du module" placeholder="Nom du module" wire:model.live="name" />
+
+                <flux:switch wire:model.live="status" label="Status" description="Activer ou desactiver le module." />
                 <div class="flex">
                     <flux:spacer />
 
