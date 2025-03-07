@@ -72,7 +72,7 @@ new class extends Component {
       <div class="p-4 md:p-5">
         <div class="flex justify-between items-center gap-x-3">
           <div class="grow">
-            <h3 class="group-hover:text-fuchsia-600 font-semibold text-gray-800 dark:group-hover:text-neutral-400 dark:text-neutral-200">
+            <h3 class="group-hover:text-rose-800 font-semibold text-gray-800 dark:group-hover:text-neutral-400 dark:text-neutral-200">
               {{ $module->name }}
             </h3>
             <p class="text-sm text-gray-500 dark:text-neutral-500">

@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@import "./tom-select.css";
+
 @import '../../vendor/livewire/flux/dist/flux.css';
 
 @source "../views";
@@ -8,8 +10,12 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+[x-cloak] {
+    display: none;
+}
+
 @theme {
-    --font-sans: 'Ubuntu', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'JetBrains Mono', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
     --color-zinc-50: #fafafa;
     --color-zinc-100: #f5f5f5;

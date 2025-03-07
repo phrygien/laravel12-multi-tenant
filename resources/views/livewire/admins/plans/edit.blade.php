@@ -19,6 +19,12 @@ new class extends Component {
         $plan = Plan::find($this->id);
         return $planModules = $plan->modules()->get();
     }
+
+    public function attachModule($id)
+    {
+      $this->dispatch("attachModule", $id);
+    }
+
     public function with(): array
     {
         return [
@@ -35,6 +41,7 @@ new class extends Component {
     <flux:separator variant="subtle" />
 </div>
 
+<livewire:admins.plans.attach-module />
 <!-- List -->
 <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
 <div class="space-y-3">
@@ -169,16 +176,13 @@ new class extends Component {
                 {{ __('Modules') }}
               </h2>
               <p class="text-sm text-gray-600 dark:text-neutral-400">
-                {{ __('Tous les modules associés à ce plan') }}
+                {{ __('Tous les modules rattaches au plan') }}       
               </p>
             </div>
 
             <div>
               <div class="inline-flex gap-x-2">
-
-                <flux:button variant="primary">
-                  {{ __('Attacher un module') }}
-                </flux:button>
+                  <flux:button wire:click="attachModule({{ $plan->id }})" variant="primary">{{__('Attacher un module')}}</flux:button>
               </div>
             </div>
           </div>
@@ -186,153 +190,23 @@ new class extends Component {
 
           <!-- Table -->
           <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700">
-            <thead class="bg-gray-50 dark:bg-neutral-800">
-              <tr>
-                <th scope="col" class="px-6 py-3 text-start">
-                  <a class="group inline-flex items-center gap-x-2 text-xs font-semibold uppercase text-gray-800 hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">
-                    Team
-                    <svg class="shrink-0 size-3.5 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>
-                  </a>
-                </th>
-
-                <th scope="col" class="px-6 py-3 text-start">
-                  <a class="group inline-flex items-center gap-x-2 text-xs font-semibold uppercase text-gray-800 hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">
-                    Description
-                    <svg class="shrink-0 size-3.5 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>
-                  </a>
-                </th>
-
-                <th scope="col" class="px-6 py-3 text-start">
-                  <a class="group inline-flex items-center gap-x-2 text-xs font-semibold uppercase text-gray-800 hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">
-                    Industry
-                    <svg class="shrink-0 size-3.5 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>
-                  </a>
-                </th>
-
-                <th scope="col" class="px-6 py-3 text-start">
-                  <a class="group inline-flex items-center gap-x-2 text-xs font-semibold uppercase text-gray-800 hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">
-                    Rated
-                    <svg class="shrink-0 size-3.5 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>
-                  </a>
-                </th>
-
-                <th scope="col" class="px-6 py-3 text-start">
-                  <a class="group inline-flex items-center gap-x-2 text-xs font-semibold uppercase text-gray-800 hover:text-gray-500 focus:outline-hidden focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-500 dark:focus:text-neutral-500" href="#">
-                    Members
-                    <svg class="shrink-0 size-3.5 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>
-                  </a>
-                </th>
-
-                <th scope="col" class="px-6 py-3 text-end"></th>
-              </tr>
-            </thead>
-
-            <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
-
-            @foreach($modules as $module)
-              <tr class="bg-white hover:bg-gray-50 dark:bg-neutral-900 dark:hover:bg-neutral-800">
-                <td class="size-px whitespace-nowrap">
-                  <a class="block relative z-10" href="#">
-                    <div class="px-6 py-2">
-                      <div class="block text-sm text-blue-600 decoration-2 hover:underline dark:text-blue-500">{{ $module->name }}</div>
-                    </div>
-                  </a>
-                </td>
-                <td class="h-px w-72 min-w-72">
-                  <a class="block relative z-10" href="#">
-                    <div class="px-6 py-2">
-                      <p class="text-sm text-gray-500 dark:text-neutral-500">Our group promotes and sells products and services by leveraging online marketing tactics</p>
-                    </div>
-                  </a>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <a class="block relative z-10" href="#">
-                    <div class="px-6 py-2">
-                      <span class="inline-flex items-center gap-1.5 py-1 px-2 rounded-lg text-xs font-medium bg-gray-100 text-gray-800 dark:bg-neutral-900 dark:text-neutral-200">
-                        Marketing team
-                      </span>
-                    </div>
-                  </a>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <a class="block relative z-10" href="#">
-                    <div class="px-6 py-2 flex gap-x-1">
-                      <svg class="shrink-0 size-3 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                      </svg>
-                      <svg class="shrink-0 size-3 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                      </svg>
-                      <svg class="shrink-0 size-3 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                      </svg>
-                      <svg class="shrink-0 size-3 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                      </svg>
-                      <svg class="shrink-0 size-3 text-transparent" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                      </svg>
-                    </div>
-                  </a>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <a class="block relative z-10" href="#">
-                    <div class="px-6 py-2 flex -space-x-2">
-                      <div class="hs-tooltip inline-flex">
-                        <img class="hs-tooltip-toggle inline-block size-6 rounded-full ring-2 ring-white dark:ring-neutral-900" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80" alt="Avatar">
-                        <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-2xs dark:bg-neutral-700" role="tooltip">
-                          David Harrison
-                        </span>
-                      </div>
-                      <div class="hs-tooltip inline-flex">
-                        <img class="inline-block size-6 rounded-full ring-2 ring-white dark:ring-neutral-900" src="https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80" alt="Avatar">
-                        <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-2xs dark:bg-neutral-700" role="tooltip">
-                          Amanda Jr.
-                        </span>
-                      </div>
-                      <div class="hs-tooltip inline-flex">
-                        <img class="inline-block size-6 rounded-full ring-2 ring-white dark:ring-neutral-900" src="https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80" alt="Avatar">
-                        <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity block absolute invisible z-10 py-1 px-2 bg-gray-900 text-xs font-medium text-white rounded-md shadow-2xs dark:bg-neutral-700" role="tooltip">
-                          Asia Boone
-                        </span>
-                      </div>
-                    </div>
-                  </a>
-                </td>
-                <td class="size-px whitespace-nowrap">
-                  <div class="px-6 py-2">
-                    <div class="hs-dropdown [--placement:bottom-right] relative inline-block">
-                      <button id="hs-table-dropdown-1" type="button" class="hs-dropdown-toggle py-1.5 px-2 inline-flex justify-center items-center gap-2 rounded-lg text-gray-700 align-middle disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:text-neutral-400 dark:hover:text-white dark:focus:ring-offset-gray-800" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                        <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
-                      </button>
-                      <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden divide-y divide-gray-200 min-w-40 z-20 bg-white shadow-2xl rounded-lg p-2 mt-2 dark:divide-neutral-700 dark:bg-neutral-800 dark:border dark:border-neutral-700" role="menu" aria-orientation="vertical" aria-labelledby="hs-table-dropdown-1">
-                        <div class="py-2 first:pt-0 last:pb-0">
-                          <span class="block py-2 px-3 text-xs font-medium uppercase text-gray-400 dark:text-neutral-600">
-                            Actions
-                          </span>
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Rename team
-                          </a>
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Add to favorites
-                          </a>
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 dark:focus:text-neutral-300" href="#">
-                            Archive team
-                          </a>
-                        </div>
-                        <div class="py-2 first:pt-0 last:pb-0">
-                          <a class="flex items-center gap-x-3 py-2 px-3 rounded-lg text-sm text-red-600 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-red-500 dark:hover:bg-neutral-700 dark:hover:text-neutral-300" href="#">
-                            Delete
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
+          <thead>
+            <tr>
+              <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-500">{{ __('Nom du module') }}</th>
+              <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase dark:text-neutral-500">Action</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
+            @foreach ($modules as $module)
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">{{ $module->name }}</td>
+              <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
+                <flux:button variant="danger" icon="minus-circle"></flux:button>
+              </td>
+            </tr>
             @endforeach
-            </tbody>
-          </table>
+          </tbody>
+        </table>
           <!-- End Table -->
 
           <!-- Footer -->
@@ -365,6 +239,7 @@ new class extends Component {
   <!-- End Card -->
 </div>
 <!-- End Table Section -->
+
 
 <!-- Table Section -->
 <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
