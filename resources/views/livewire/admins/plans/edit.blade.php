@@ -8,27 +8,27 @@ use Livewire\Volt\Component;
 new class extends Component {
     use WithPagination;
 
-    public $id;
+    public Plan $plan;
     public function mount(): void
     {
-
+      
     }
 
     public function modules()
     {
-        $plan = Plan::find($this->id);
+        $plan = Plan::find($this->plan->id);
         return $planModules = $plan->modules()->get();
     }
 
     public function attachModule($id)
     {
-      $this->dispatch("attachModule", $id);
+      $this->dispatch("attachModule", $this->plan);
     }
 
     public function with(): array
     {
         return [
-            'plan' => Plan::find($this->id),
+            'plan' => Plan::find($this->plan->id),
             'modules' => $this->modules()
         ];
     }
@@ -41,7 +41,7 @@ new class extends Component {
     <flux:separator variant="subtle" />
 </div>
 
-<livewire:admins.plans.attach-module />
+<livewire:admins.plans.attach-module :plan="$plan"/>
 <!-- List -->
 <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
 <div class="space-y-3">

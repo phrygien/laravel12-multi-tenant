@@ -1,3 +1,3 @@
 <x-layouts.app>
-    <livewire:admins.plans.edit :id="$id" />
+    <livewire:admins.plans.edit :plan="$plan" />
 </x-layouts.app>

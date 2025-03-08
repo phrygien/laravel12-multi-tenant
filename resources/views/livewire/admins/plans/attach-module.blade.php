@@ -8,45 +8,31 @@ use Livewire\Volt\Component;
 use Illuminate\Support\Facades\DB;
 
 new class extends Component {
-    public $planId;
+    public Plan $plan;
     public $modules = [];
-    public $selectedModules = []; // Propriété pour stocker les éléments sélectionnés
+    public $selectedModules = [];
 
     public function mount()
     {
-
-        // Récupérer les modules non associés au plan
-        $modulesCollection = Module::all();
+        // je veux avoir la liste des modules qui ne sont pas dans le plan
+        $modulesCollection = Module::whereNotIn('modules.id', $this->plan->modules()->pluck('modules.id'))->get();
         $this->modules = $modulesCollection->pluck('name', 'id')->toArray();
     }
 
     #[On('attachModule')]
-    public function attachModule(int $id): void
+    public function attachModule($id): void
     {
-        $this->planId = $id;
-
-        // Récupérer les modules non associés au plan
-        $modulesCollection = Module::whereDoesntHave('plans', function ($query) use ($id) {
-            $query->where('plan_id', $this->planId);
-        })->get();
-
-        // Convertir la collection en tableau associatif [id => name]
-        $this->modules = $modulesCollection->pluck('name', 'id')->toArray();
         // Ouvrir la modal d'attachement de module
         Flux::modal('attach-module')->show();
     }
 
     public function submit()
     {
-        dd($this->selectedModules);
+        $plan = Plan::find($this->plan->id);
+        $plan->modules()->sync($this->selectedModules, false);
+        Flux::modal('attach-module')->close();
     }
 
-    public function with(): array
-    {
-        return [
-            'modules' => $this->modules
-        ];
-    }
 }; ?>
 
 <div>

@@ -17,7 +17,7 @@
     <select 
         x-ref="select" 
         {{ $disabled ? 'disabled' : '' }} 
-        {!! $attributes->merge(['class' => 'border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm']) !!}
+        {!! $attributes->merge(['class' => 'border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm dark:text-white dark:bg-zinc-700']) !!}
     >
         @foreach($options as $key => $value)
             <option value="{{ $key }}" {{ in_array($key, $selected) ? 'selected' : '' }}>{{ $value }}</option>

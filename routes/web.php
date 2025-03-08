@@ -31,7 +31,8 @@ foreach (config('tenancy.central_domains') as $domain) {
 
                 Route::view('plans', 'pages.admins.plans.index')->name('admin.plans');
                 Route::get('/plans/{id}/edit', function ($id) {
-                    return view('pages.admins.plans.edit', ['id' => $id]);
+                    $plan = App\Models\Plan::find($id);
+                    return view('pages.admins.plans.edit', compact('plan'));
                 })->name('plans.edit');
             });
         });
