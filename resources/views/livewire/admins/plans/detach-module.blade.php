@@ -40,10 +40,10 @@ new class extends Component {
             <flux:spacer />
 
             <flux:modal.close>
-                <flux:button variant="ghost">Cancel</flux:button>
+                <flux:button variant="ghost">{{ __('Annuler') }}</flux:button>
             </flux:modal.close>
 
-            <flux:button type="submit" variant="danger" wire:click="submit">Dettacher le module</flux:button>
+            <flux:button type="submit" variant="danger" wire:click="submit">{{ __('Detacher') }}</flux:button>
         </div>
     </div>
 </flux:modal>
