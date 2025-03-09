@@ -30,7 +30,9 @@ new class extends Component {
     {
         $plan = Plan::find($this->plan->id);
         $plan->modules()->sync($this->selectedModules, false);
+        $this->selectedModules = [];
         Flux::modal('attach-module')->close();
+        $this->dispatch('refreshModules');
     }
 
 }; ?>
