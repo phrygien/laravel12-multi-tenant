@@ -14,8 +14,12 @@ return new class extends Migration
         Schema::create('plan_features', function (Blueprint $table) {
             $table->id();
             $table->foreignId('plan_id')->constrained()->onDelete('cascade');
-            $table->string('name'); // Ex: max_users, max_storage, support
-            $table->string('value'); // Ex: 10, 5GB, email
+            $table->string('name');
+            $table->string('description')->nullable();
+            $table->integer('valeur')->default(0);
+            $table->enum('type', ['free', 'paid'])->default('free');
+            $table->decimal('price', 8, 2)->default(0);
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
     }

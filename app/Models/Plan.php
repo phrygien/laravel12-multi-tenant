@@ -10,9 +10,9 @@ class Plan extends Model
 {
     protected $table = 'plans';
 
-    public function features(): BelongsToMany
+    public function features(): HasMany
     {
-        return $this->belongsToMany(PlanFeature::class);
+        return $this->hasMany(PlanFeature::class);
     }
 
     public function modules()
