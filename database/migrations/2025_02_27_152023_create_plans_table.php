@@ -18,6 +18,13 @@ return new class extends Migration
             $table->boolean('have_trial')->default(true);
             $table->text('description')->nullable();
             $table->boolean('is_popular')->default(false);
+            $table->integer('limit_users')->default(0);
+            $table->integer('limit_domains')->default(0);
+            $table->integer('limit_customers')->default(0);
+            $table->integer('limit_modules')->default(0);
+            $table->integer('limit_features')->default(0);
+            $table->integer('limit_vendors')->default(0);
+            $table->integer('limit_products')->default(0);
             $table->timestamps();
         });
     }

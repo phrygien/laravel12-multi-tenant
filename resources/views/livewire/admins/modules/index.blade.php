@@ -68,25 +68,15 @@ new class extends Component {
     <div class="grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-3 sm:gap-6">
     @foreach ($modules as $module)
     <!-- Card -->
-    <a class="group flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl hover:text-fuchsia-600 hover:shadow-md focus:outline-hidden focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800">
-      <div class="p-4 md:p-5">
-        <div class="flex justify-between items-center gap-x-3">
-          <div class="grow">
-            <h3 class="group-hover:text-rose-800 font-semibold text-gray-800 dark:group-hover:text-neutral-400 dark:text-neutral-200">
-              {{ $module->name }}
-            </h3>
-            <p class="text-sm text-gray-500 dark:text-neutral-500">
-            Créer le  {{ \Carbon\Carbon::parse($module->created_at)->translatedFormat('d F Y') }}
+    <flux:callout icon="cube" variant="secondary" inline>
+    <flux:callout.heading>{{ $module->name }}</flux:callout.heading>
 
-            </p>
-          </div>
-          <div class="card-actions justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                <flux:button icon="pencil" wire:click="edit({{ $module->id }})"></flux:button>
-                <flux:button icon="minus-circle" variant="danger" wire:click="deleteData({{ $module->id }})" class="dark:border dark:border-zinc-700" :loading="false"></flux:button>
-            </div>
-        </div>
-      </div>
-    </a>
+    <x-slot name="actions">
+            <flux:button wire:click="edit({{ $module->id }})">{{ __('Modifier')}} -></flux:button>
+            <flux:button variant="ghost" variant="danger" wire:click="deleteData({{ $module->id }})">{{ __('Supprimer')}}</flux:button>
+        </x-slot>
+    </flux:callout>
+
     <!-- End Card -->
     @endforeach
 </div>
