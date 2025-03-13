@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('modules', function (Blueprint $table) {
+        Schema::create('limites', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique();
-            $table->enum('status', ['active', 'inactive'])->default('active');
-            $table->boolean('have_limite')->default(false);
+            $table->string('name');
+            $table->integer('max_value')->default(1000000);
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('modules');
+        Schema::dropIfExists('limites');
     }
 };

@@ -27,23 +27,16 @@ new class extends Component {
 
     <div class="relative xl:w-10/12 xl:mx-auto">
       <!-- Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+      <div class="grid grid-cols-1 lg:grid-cols-1 gap-6 lg:gap-8">
 
         @foreach ($plans as $plan)
         <div>
           <!-- Card -->
-          <flux:callout icon="sparkles" variant="secondary">
-            <flux:callout.heading>
-                {{ $plan->name }} <flux:badge color="teal" size="sm" inset="top bottom">{{ $plan->price }} MGA / mois</flux:badge>
-            </flux:callout.heading>
-
-            <flux:callout.text>
-                <p>{{ $plan->description }}</p>
-            </flux:callout.text>
+          <flux:callout icon="sparkles" variant="secondary" inline>
+            <flux:callout.heading>{{ $plan->name }} / {{ $plan->price }} par mois</flux:callout.heading>
 
             <x-slot name="actions">
-                <flux:button variant="primary" icon="heart">{{ __('Subscribe') }}</flux:button>
-                <flux:button variant="ghost" wire:navigate class="@max-md:hidden" href="{{ route('plans.edit', ['id' => $plan->id]) }}">{{ __('Details ->') }}</flux:button>
+                <flux:button variant="ghost" href="{{ route('plans.edit', ['id' => $plan->id]) }}">{{ __('Details') }}</flux:button>
             </x-slot>
         </flux:callout>
           <!-- End Card -->
