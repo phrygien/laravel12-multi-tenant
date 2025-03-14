@@ -27,7 +27,7 @@ new class extends Component {
 
     <div class="relative xl:w-10/12 xl:mx-auto">
       <!-- Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-1 gap-6 lg:gap-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
 
         @foreach ($plans as $plan)
         <div>

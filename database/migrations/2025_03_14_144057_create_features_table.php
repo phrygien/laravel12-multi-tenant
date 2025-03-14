@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('plan_features', function (Blueprint $table) {
+        Schema::create('features', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('plan_id')->constrained()->onDelete('cascade');
-            $table->string('name');
-            $table->string('description')->nullable();
-            $table->integer('valeur')->default(0);
-            $table->enum('type', ['free', 'paid'])->default('free');
-            $table->decimal('price', 8, 2)->default(0);
+            $table->string('name')->unique();
+            $table->string('description')->nullable()->default('Example Description');
             $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
@@ -29,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('plan_features');
+        Schema::dropIfExists('features');
     }
 };

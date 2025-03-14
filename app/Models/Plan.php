@@ -10,9 +10,14 @@ class Plan extends Model
 {
     protected $table = 'plans';
 
-    public function features(): HasMany
+    public function features()
     {
-        return $this->hasMany(PlanFeature::class);
+        return $this->belongsToMany(Feature::class)->withPivot('limit')->withTimestamps();
+    }
+
+    public function getLimit(string $featureName): ?int
+    {
+        return $this->features()->where('name', $featureName)->first()?->pivot->limit;
     }
 
     public function modules()

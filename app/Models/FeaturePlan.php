@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Limite extends Model
+class FeaturePlan extends Model
 {
     //
 }

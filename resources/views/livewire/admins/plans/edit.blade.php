@@ -12,7 +12,7 @@ new class extends Component {
     public Plan $plan;
     public function mount(): void
     {
-      
+
     }
 
     #[On('refreshModules')]
