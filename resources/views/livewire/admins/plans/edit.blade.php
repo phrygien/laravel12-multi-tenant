@@ -40,9 +40,9 @@ new class extends Component {
       $this->dispatch("detachModule", $id);
     }
 
-    public function editFeature($id)
+    public function attachFeature($id)
     {
-      $this->dispatch("editFeature", $id);
+      $this->dispatch("attachFeature", $id);
     }
 
     public function with(): array
@@ -64,6 +64,7 @@ new class extends Component {
 
 <livewire:admins.plans.attach-module :plan="$plan"/>
 <livewire:admins.plans.detach-module :plan="$plan"/>
+<livewire:admins.plans.attach-feature :plan="$plan"/>
 <!-- List -->
 <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
 <div class="space-y-3">
@@ -160,7 +161,7 @@ new class extends Component {
 
 <!-- Table Section -->
 <!-- Table Section -->
-<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto" hidden>
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
   <!-- Card -->
   <div class="flex flex-col">
     <div class="-m-1.5 overflow-x-auto">
@@ -170,7 +171,7 @@ new class extends Component {
           <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 dark:border-neutral-700">
             <div>
               <h2 class="text-xl font-semibold text-gray-800 dark:text-neutral-200">
-                {{ __('Features') }}
+                {{ __('Configurations') }}
               </h2>
               <p class="text-sm text-gray-600 dark:text-neutral-400">
                 {{ __('Tous les features rattaches au plan') }}       
@@ -179,7 +180,7 @@ new class extends Component {
 
             <div>
               <div class="inline-flex gap-x-2">
-                  <flux:button wire:click="attachModule({{ $plan->id }})" variant="primary">{{__('Attacher un module')}}</flux:button>
+                  <flux:button wire:click="attachFeature({{ $plan->id }})" variant="primary">{{__('Limit config')}}</flux:button>
               </div>
             </div>
           </div>
@@ -198,9 +199,10 @@ new class extends Component {
             @foreach ($planFeatures as $feature)
             <tr>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">{{ $feature->name }}</td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">{{ $feature->value }}</td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">{{ $feature->pivot->limit !== null ? $feature->pivot->limit : 'Illimité' }}</td>
               <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
                 <flux:button icon="pencil" wire:click="editFeature({{ $feature->id }})"> {{__('Modifier')}}</flux:button>
+                <flux:button icon="trash" wire:click="detachModule({{ $module->id }})"></flux:button>
               </td>
             </tr>
             @endforeach
