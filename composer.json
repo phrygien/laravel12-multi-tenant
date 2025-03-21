@@ -13,7 +13,9 @@
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
         "livewire/flux": "^2.0",
-        "livewire/volt": "^1.6.7",
+        "livewire/livewire": "^3.6",
+        "livewire/volt": "^1.7",
+        "robsontenorio/mary": "V2.x-dev",
         "stancl/tenancy": "^3.9"
     },
     "require-dev": {

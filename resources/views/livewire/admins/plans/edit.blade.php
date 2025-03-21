@@ -23,6 +23,7 @@ new class extends Component {
         return $planModules;
     }
     
+    #[On('refreshFeatures')]
     public function planFeatures()
     {
         $plan = Plan::find($this->plan->id);

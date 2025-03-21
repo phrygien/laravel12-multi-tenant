@@ -3,14 +3,18 @@
 use App\Models\Feature;
 use App\Models\Plan;
 use Flux\Flux;
+use Mary\Traits\Toast;
 use Livewire\Attributes\On;
 use Livewire\Attributes\Rule;
 use Livewire\Volt\Component;
 
 new class extends Component {
+
+    use Toast;
+
     public Plan $plan;
 
-    public $features = [];
+    public $features;
 
     #[Rule('required')]
     public $feature_id;
@@ -20,10 +24,17 @@ new class extends Component {
 
     public function mount(): void
     {
-        // je veux recupeer le liste des features qui ne sont pas dans le plan
+        // Je veux récupérer la liste des features qui ne sont pas dans le plan
         $featuresCollection = Feature::whereNotIn('features.id', $this->plan->features()->pluck('features.id'))->get();
-        $this->features = $featuresCollection->pluck('name', 'id')->toArray();
+    
+        // Transformer la collection en un tableau avec des attributs comme 'disabled'
+        $this->features = $featuresCollection->map(function ($feature) {
+            $featureArray = ['id' => $feature->id, 'name' => $feature->name];
+            return $featureArray;
+        });
     }
+    
+    
 
     #[On('attachFeature')]
     public function attachFeature($id): void
@@ -37,8 +48,20 @@ new class extends Component {
         $this->validate();
         $plan = Plan::find($this->plan->id);
         $plan->features()->syncWithoutDetaching([$this->feature_id => ['limit' => $this->limit]]);
+        $this->success('Feature attaché');
+        $this->reset('feature_id', 'limit');
+        $this->dispatch('refreshFeatures');
+
         Flux::modal('attach-feature')->close();
         
+    }
+
+    public function with(): array
+    {
+        return [
+            'plan' => $this->plan,
+            'features' => $this->features,
+        ];
     }
 }; ?>
 
@@ -51,12 +74,7 @@ new class extends Component {
                     <flux:subheading>{{ __('Limitez les fonctionnalités de votre plan') }}</flux:subheading>
                 </div>
 
-                <flux:select wire:model.live="feature_id" placeholder="Choose industry..." label="Feature">
-                <flux:select.option></flux:select.option>
-                    @foreach ($features as $key => $value)
-                        <flux:select.option value="{{ $key }}">{{ $value }}</flux:select.option>
-                    @endforeach
-                </flux:select>
+                <x-mary-select label="Feature" wire:model="feature_id" :options="$features" />
 
                 <flux:input wire:model.live="limit" label="Valeur" placeholder="" />
 
