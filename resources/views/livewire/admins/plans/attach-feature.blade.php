@@ -24,10 +24,7 @@ new class extends Component {
 
     public function mount(): void
     {
-        // Je veux récupérer la liste des features qui ne sont pas dans le plan
         $featuresCollection = Feature::whereNotIn('features.id', $this->plan->features()->pluck('features.id'))->get();
-    
-        // Transformer la collection en un tableau avec des attributs comme 'disabled'
         $this->features = $featuresCollection->map(function ($feature) {
             $featureArray = ['id' => $feature->id, 'name' => $feature->name];
             return $featureArray;
@@ -39,7 +36,6 @@ new class extends Component {
     #[On('attachFeature')]
     public function attachFeature($id): void
     {
-        // Ouvrir la modal d'attachement de module
         Flux::modal('attach-feature')->show();
     }
 
@@ -48,12 +44,9 @@ new class extends Component {
         $this->validate();
         $plan = Plan::find($this->plan->id);
         $plan->features()->syncWithoutDetaching([$this->feature_id => ['limit' => $this->limit]]);
-        $this->success('Feature attaché');
         $this->reset('feature_id', 'limit');
+        Flux::modal('attach-feature')->show();
         $this->dispatch('refreshFeatures');
-
-        Flux::modal('attach-feature')->close();
-        
     }
 
     public function with(): array
@@ -74,7 +67,12 @@ new class extends Component {
                     <flux:subheading>{{ __('Limitez les fonctionnalités de votre plan') }}</flux:subheading>
                 </div>
 
-                <x-mary-select label="Feature" wire:model="feature_id" :options="$features" />
+                <flux:select wire:model.live="feature_id" label="Feature Name">
+                    <flux:select.option value="">{{ __('Choose feature...') }}</flux:select.option>
+                    @foreach($features as $feature)
+                    <flux:select.option value="{{ $feature['id'] }}">{{ $feature['name'] }}</flux:select.option>
+                    @endforeach
+                </flux:select>
 
                 <flux:input wire:model.live="limit" label="Valeur" placeholder="" />
 

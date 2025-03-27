@@ -46,6 +46,11 @@ new class extends Component {
       $this->dispatch("attachFeature", $id);
     }
 
+    public function detachFeature($id)
+    {
+      $this->dispatch("detachFeature", $id);
+    }
+
     public function with(): array
     {
         return [
@@ -66,6 +71,7 @@ new class extends Component {
 <livewire:admins.plans.attach-module :plan="$plan"/>
 <livewire:admins.plans.detach-module :plan="$plan"/>
 <livewire:admins.plans.attach-feature :plan="$plan"/>
+<livewire:admins.plans.detach-feature :plan="$plan"/>
 <!-- List -->
 <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
 <div class="space-y-3">
@@ -202,8 +208,8 @@ new class extends Component {
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">{{ $feature->name }}</td>
               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">{{ $feature->pivot->limit !== null ? $feature->pivot->limit : 'Illimité' }}</td>
               <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
-                <flux:button icon="pencil" wire:click="editFeature({{ $feature->id }})"> {{__('Modifier')}}</flux:button>
-                <flux:button icon="trash" wire:click="detachModule({{ $module->id }})"></flux:button>
+                <!-- <flux:button icon="pencil" wire:click="editFeature({{ $feature->id }})" :loading="false"> {{__('Modifier')}}</flux:button> -->
+                <flux:button variant="danger" icon="minus-circle" wire:click="detachFeature({{ $feature->id }})" :loading="false"></flux:button>
               </td>
             </tr>
             @endforeach

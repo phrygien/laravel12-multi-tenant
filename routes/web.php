@@ -22,6 +22,10 @@ foreach (config('tenancy.central_domains') as $domain) {
             Volt::route('settings/profile', 'settings.profile')->name('settings.profile');
             Volt::route('settings/password', 'settings.password')->name('settings.password');
             Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
+
+            // manage subscription
+            Route::view('subscriptions', 'pages.subscriptions.index')->name('subscriptions');
+            Route::view('subscriptions/{plan}', 'pages.subscriptions.subscribe')->name('subscriptions.subscribe');
         });
 
         Route::middleware(['auth'])->group(function () {
