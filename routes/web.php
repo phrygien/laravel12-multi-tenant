@@ -25,7 +25,11 @@ foreach (config('tenancy.central_domains') as $domain) {
 
             // manage subscription
             Route::view('subscriptions', 'pages.subscriptions.index')->name('subscriptions');
-            Route::view('subscriptions/{plan}', 'pages.subscriptions.subscribe')->name('subscriptions.subscribe');
+            //Route::view('subscriptions/{plan}', 'pages.admins.plans.subscribe')->name('subscriptions.subscribe');
+            Route::get('subscriptions/{plan}', function ($plan) {
+                $plan = App\Models\Plan::find($plan);
+                return view('pages.admins.plans.subscribe', compact('plan'));
+            })->name('subscriptions.subscribe');
         });
 
         Route::middleware(['auth'])->group(function () {

@@ -89,18 +89,14 @@ new class extends Component {
     </dd>
   </dl>
 
-  <dl class="flex flex-col sm:flex-row gap-1">
-    <dt class="min-w-40">
-      <span class="block text-sm text-gray-500 dark:text-neutral-500">{{ __('Prix du plan ')}}:</span>
-    </dt>
-    <dd>
-      <ul>
-        <li class="me-1 after:content-[''] inline-flex items-center text-sm text-gray-800 dark:text-neutral-200">
-          {{ $plan->price }} Ar par mois
-        </li>
-      </ul>
-    </dd>
-  </dl>
+  <flux:callout icon="banknotes" color="lime" inline>
+          <flux:callout.heading>Tarif {{ $plan->price }} Ar par mois</flux:callout.heading>
+
+          <x-slot name="actions">
+              <flux:button href="{{ route('subscriptions.subscribe', $plan->id) }}">{{ __('Subscribe Now ->')}}</flux:button>
+          </x-slot>
+      </flux:callout>
+
 </div>
 </div>
 <!-- End List -->
@@ -187,7 +183,7 @@ new class extends Component {
 
             <div>
               <div class="inline-flex gap-x-2">
-                  <flux:button wire:click="attachFeature({{ $plan->id }})" variant="primary">{{__('Limit config')}}</flux:button>
+                  <flux:button wire:click="attachFeature({{ $plan->id }})" variant="primary">{{__('Attacher un feature')}}</flux:button>
               </div>
             </div>
           </div>
